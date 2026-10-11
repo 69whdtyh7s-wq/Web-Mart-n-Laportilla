@@ -104,6 +104,8 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 .contacts .v{font:400 clamp(1.15rem,3vw,1.45rem)/1.3 var(--serif);word-break:break-word}
 .ig{display:inline-flex;align-items:center;gap:.65rem;transition:color .2s}
 .ig svg{flex:none;border-radius:7px}
+.mail{transition:color .2s}
+.mail:hover{color:var(--accent)}
 .ig:hover{color:var(--accent)}
 .copy{justify-self:start;background:none;border:0;border-bottom:1px solid var(--muted);color:var(--muted);font:500 .68rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:0 0 .35rem;cursor:pointer}
 .copy:hover{color:var(--fg);border-color:var(--fg)}
@@ -228,7 +230,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
     <div class="contacts">
       <div>
         <span class="label">Contratación</span>
-        <span class="v" id="mail">hola@martinlaportilla.com</span>
+        <a class="v mail" id="mail" href="mailto:hola@martinlaportilla.com">hola@martinlaportilla.com</a>
         <button class="copy" type="button" id="copy-mail">Copiar email</button>
       </div>
       <div>
