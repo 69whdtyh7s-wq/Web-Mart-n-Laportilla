@@ -112,12 +112,15 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 
 /* directos */
 .shows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.shows li{display:grid;grid-template-columns:5.5rem minmax(0,1fr) auto;gap:1.5rem;align-items:center;padding-block:1.4rem;border-bottom:1px solid var(--line)}
+.shows li{display:grid;grid-template-columns:5.5rem minmax(0,1fr) minmax(0,auto) auto;gap:1.5rem;align-items:center;padding-block:1.4rem;border-bottom:1px solid var(--line)}
+.shows h3{font-weight:600}
+.shows .venue{color:var(--muted);text-align:right;font-size:.95rem}
+.shows li > :last-child:not(.btn){grid-column:span 1}
 .date{display:grid;line-height:1}
 .date b{font:400 2.4rem/1 var(--serif);font-variant-numeric:lining-nums tabular-nums}
 .date span{margin-top:.35rem}
 .shows .where{min-width:0}
-.shows .where div{color:var(--muted);font-size:.95rem}
+
 .note{margin-top:1rem;color:var(--muted);font-size:.85rem}
 
 /* música */
@@ -168,7 +171,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   .bio > div p:not(.lead){grid-column:1}
   .portrait{aspect-ratio:3/2;object-position:center}
   .videos{grid-template-columns:1fr}
-  .shows li{grid-template-columns:4.5rem minmax(0,1fr)}
+  .shows li{grid-template-columns:4.5rem minmax(0,1fr);gap:.35rem 1rem}
+  .shows .venue{grid-column:2;text-align:left}
   .shows li .btn{grid-column:2;justify-self:start}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
@@ -360,10 +364,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
       .sort(function(a,b){ return a.fecha < b.fecha ? -1 : 1; });
     list.innerHTML = proximos.map(function(c){
       var p = c.fecha.split('-');
-      var detalle = [c.ciudad, c.con ? t('with') + ' ' + c.con : ''].filter(Boolean).map(esc).join(' · ');
+      var artista = c.con || c.lugar;
+      var sitio = [c.con ? c.lugar : '', c.ciudad].filter(Boolean).map(esc).join(' · ');
       var boton = c.entradas ? '<a class="btn small" href="' + esc(c.entradas) + '" target="_blank" rel="noopener">' + t('tickets') + '</a>' : '';
       return '<li><div class="date"><b>' + p[2] + '</b><span class="label">' + t('months')[+p[1] - 1] + ' ' + p[0] + '</span></div>' +
-        '<div class="where"><h3>' + esc(c.lugar) + '</h3><div>' + detalle + '</div></div>' + boton + '</li>';
+        '<div class="where"><h3>' + esc(artista) + '</h3></div><div class="venue">' + sitio + '</div>' + (boton || '<span></span>') + '</li>';
     }).join('');
     empty.hidden = proximos.length > 0;
   }
