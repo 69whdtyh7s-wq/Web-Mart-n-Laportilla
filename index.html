@@ -97,6 +97,8 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 .thumb i{width:3rem;height:3rem;border:1px solid var(--fg);background:rgba(236,229,216,.8);color:var(--fg);border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:.8rem;padding-left:.15rem}
 .video:hover .thumb{opacity:.8}
 .video h3{font-size:1.1rem}
+.thumb iframe{width:100%;height:100%;border:0;display:block}
+.video.playing{cursor:default}
 
 /* equipo */
 .gear{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 3rem}
@@ -206,7 +208,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   <div class="wrap">
     <div class="sh"><h2>Vídeos</h2><a class="label" href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener">Ver más en Instagram ↗</a></div>
     <div class="videos">
-      <a class="video" href="https://www.youtube.com/watch?v=5zkQnwMKlJU" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/5zkQnwMKlJU/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Portrait of Jaco</h3><span class="label">YouTube</span></a>
+      <a class="video" href="https://www.youtube.com/watch?v=5zkQnwMKlJU" target="_blank" rel="noopener" data-yt="5zkQnwMKlJU"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/5zkQnwMKlJU/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Portrait of Jaco</h3><span class="label">YouTube</span></a>
       <a class="video" href="#"><div class="thumb"><i aria-hidden="true">▶</i></div><h3>Sesión de estudio</h3><span class="label">YouTube</span></a>
       <a class="video" href="#"><div class="thumb"><i aria-hidden="true">▶</i></div><h3>Bass cam · Nombre del tema</h3><span class="label">Instagram</span></a>
     </div>
@@ -292,6 +294,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
     var done = function(){ btn.textContent = 'Copiado'; setTimeout(function(){ btn.textContent = 'Copiar email'; }, 1600); };
     var fallback = function(){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
     try { navigator.clipboard.writeText(el.textContent.trim()).then(done, fallback); } catch(e){ fallback(); }
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.video[data-yt]').forEach(function(card){
+    card.addEventListener('click', function(e){
+      if (card.classList.contains('playing')) { e.preventDefault(); return; }
+      e.preventDefault();
+      var id = card.dataset.yt, thumb = card.querySelector('.thumb');
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+      f.title = card.querySelector('h3').textContent;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      thumb.innerHTML = ''; thumb.style.backgroundImage = 'none'; thumb.appendChild(f);
+      card.classList.add('playing');
+    });
   });
 })();
 </script>
