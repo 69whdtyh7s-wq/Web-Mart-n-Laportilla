@@ -75,6 +75,14 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 .bio p{margin:0 0 1.2rem;max-width:36rem}
 .bio .lead{font:400 1.5rem/1.45 var(--serif)}
 
+/* proyectos */
+.projects{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.projects li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.5rem 2rem;align-items:baseline;padding-block:1.5rem;border-bottom:1px solid var(--line)}
+.projects h3{font-size:clamp(1.4rem,3.5vw,1.8rem)}
+.projects p{margin:.35rem 0 0;color:var(--muted);max-width:36rem}
+.projects .label{text-align:right}
+@media (max-width:720px){.projects li{grid-template-columns:1fr}.projects .label{text-align:left}}
+
 /* directos */
 .shows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .shows li{display:grid;grid-template-columns:5.5rem minmax(0,1fr) auto;gap:1.5rem;align-items:center;padding-block:1.4rem;border-bottom:1px solid var(--line)}
@@ -143,6 +151,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
     <a class="logo" href="#" aria-label="Martín Laportilla, inicio">M<span>L</span></a>
     <ul>
       <li><a href="#bio">Bio</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#directos">Directos</a></li>
       <li><a href="#musica">Música</a></li>
       <li><a href="#videos">Vídeos</a></li>
@@ -173,6 +182,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
         <p>Aquí irá tu bio real: tu formación, con quién has tocado, los estilos en los que te mueves y desde dónde trabajas.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="wrap">
+    <div class="sh"><h2>Proyectos</h2><span class="label">Bandas y artistas</span></div>
+    <ul class="projects">
+      <li><div><h3>Nombre de la banda o artista</h3><p>Estilo · una línea sobre el proyecto y tu papel en él.</p></div><span class="label">Directo y estudio · 2024–hoy</span></li>
+      <li><div><h3>Nombre de la banda o artista</h3><p>Estilo · una línea sobre el proyecto y tu papel en él.</p></div><span class="label">Gira · 2025</span></li>
+      <li><div><h3>Nombre de la banda o artista</h3><p>Estilo · una línea sobre el proyecto y tu papel en él.</p></div><span class="label">Grabación · disco</span></li>
+    </ul>
   </div>
 </section>
 
