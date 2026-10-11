@@ -35,9 +35,9 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 .bar ul a:hover{color:var(--fg)}
 
 /* portada */
-.hero{position:relative;min-height:min(88vh,52rem);display:flex;align-items:flex-end;overflow:hidden;background:#1b1712}
-.hero > img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:45% 25%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,20,15,.82) 0%,rgba(24,20,15,.35) 40%,rgba(24,20,15,0) 65%)}
+.hero{position:relative;min-height:min(80vh,48rem);display:flex;align-items:flex-end;overflow:hidden;background:#1b1712}
+.hero > img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 65%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,20,15,.7) 0%,rgba(24,20,15,0) 38%),linear-gradient(90deg,rgba(24,20,15,.55) 0%,rgba(24,20,15,0) 40%)}
 .hero-text{position:relative;z-index:1;width:100%;padding-block:clamp(3rem,7vw,5rem);color:#f4efe6}
 .hero .label{color:rgba(244,239,230,.75)}
 .hero h1{margin:.9rem 0 0;font:italic 500 clamp(3rem,8vw,6.5rem)/.95 var(--serif);letter-spacing:-.015em;text-wrap:balance}
@@ -47,7 +47,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 .hero .btn:hover{background:#f4efe6;color:#2a2620}
 @media (max-width:720px){
   .hero{display:block;min-height:0;background:var(--bg)}
-  .hero > img{position:relative;height:auto;aspect-ratio:4/5;object-position:46% 15%}
+  .hero > img{position:relative;height:auto;aspect-ratio:4/3;object-position:56% 50%}
   .hero::after{display:none}
   .hero-text{color:var(--fg);padding-block:2rem 3.5rem}
   .hero .label{color:var(--muted)}
