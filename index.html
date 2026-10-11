@@ -75,15 +75,12 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 .hero .btn{border-color:#f4efe6;color:#f4efe6}
 .hero .btn:hover{background:#f4efe6;color:#2a2620}
 @media (max-width:720px){
-  .hero{display:block;aspect-ratio:auto;max-height:none;min-height:0;background:var(--bg)}
-  .hero > img{position:relative;height:auto;aspect-ratio:4/3;object-position:56% 50%}
-  .hero::after{display:none}
-  .hero-text{color:var(--fg);padding-block:2rem 3.5rem}
-  .hero .label{color:var(--muted)}
-  .hero h1 em{color:var(--accent)}
-  .hero p{color:var(--muted)}
-  .hero .btn{border-color:var(--fg);color:var(--fg)}
-  .hero .btn:hover{background:var(--fg);color:var(--bg)}
+  .hero{aspect-ratio:4/5;max-height:calc(100svh - 6rem);min-height:26rem}
+  .hero > img{object-position:52% 40%}
+  .hero::after{background:linear-gradient(0deg,rgba(24,20,15,.85) 0%,rgba(24,20,15,.45) 35%,rgba(24,20,15,0) 60%)}
+  .hero-text{padding-block:1.5rem 2rem}
+  .hero h1{font-size:clamp(2.6rem,12vw,3.6rem)}
+  .hero p{margin:.9rem 0 1.25rem;font-size:.98rem}
 }
 .btn{display:inline-block;font:500 .75rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:1rem 1.5rem;border:1px solid var(--fg);transition:background .2s,color .2s}
 .btn:hover{background:var(--fg);color:var(--bg)}
