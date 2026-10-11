@@ -73,8 +73,7 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 .note{margin-top:1rem;color:var(--muted);font-size:.85rem}
 
 /* música */
-.release{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:clamp(1.5rem,5vw,3rem);align-items:center}
-.cover{aspect-ratio:1;max-width:100%;background:linear-gradient(135deg,#2c2a26,#151619);display:grid;place-items:center;text-align:center;padding:1rem}
+.release{display:grid;grid-template-columns:minmax(0,1fr)}
 .release p{margin:.75rem 0 1.5rem;color:var(--muted);max-width:30rem}
 .stream{display:flex;gap:.75rem;flex-wrap:wrap}
 
@@ -115,7 +114,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 @media (max-width:720px){
   .bio,.release,.gear,.contacts{grid-template-columns:1fr}
   .portrait{aspect-ratio:3/2}
-  .cover{max-width:15rem}
   .videos{grid-template-columns:1fr}
   .shows li{grid-template-columns:4.5rem minmax(0,1fr)}
   .shows li .btn{grid-column:2;justify-self:start}
@@ -178,7 +176,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   <div class="wrap">
     <div class="sh"><h2>Música</h2><span class="label">Último lanzamiento</span></div>
     <div class="release">
-      <div class="cover"><span class="label">Portada del disco</span></div>
       <div>
         <span class="label">Disco · Año</span>
         <h3 style="margin-top:.6rem;font-size:1.9rem">Título del lanzamiento</h3>
