@@ -304,8 +304,43 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   var inline = [];
   try { inline = JSON.parse(document.getElementById('shows-data').textContent); } catch(e) {}
   render(inline);
+  // Enlace CSV publicado de Google Sheets (Archivo > Compartir > Publicar en la Web > .csv)
+  var SHEET_CSV = '';
+  function parseCSV(t){
+    var rows = [], row = [], cell = '', q = false;
+    for (var i = 0; i < t.length; i++) {
+      var ch = t[i];
+      if (q) { if (ch === '"' && t[i+1] === '"') { cell += '"'; i++; } else if (ch === '"') q = false; else cell += ch; }
+      else if (ch === '"') q = true;
+      else if (ch === ',') { row.push(cell); cell = ''; }
+      else if (ch === '\n' || ch === '\r') { if (ch === '\r' && t[i+1] === '\n') i++; row.push(cell); rows.push(row); row = []; cell = ''; }
+      else cell += ch;
+    }
+    if (cell || row.length) { row.push(cell); rows.push(row); }
+    return rows;
+  }
+  function fecha(v){
+    v = (v || '').trim();
+    var m = v.match(/^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{2,4})$/);
+    if (m) { var y = m[3].length === 2 ? '20' + m[3] : m[3]; return y + '-' + ('0'+m[2]).slice(-2) + '-' + ('0'+m[1]).slice(-2); }
+    return /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : '';
+  }
+  function fromSheet(t){
+    var rows = parseCSV(t).filter(function(r){ return r.some(function(c){ return c.trim(); }); });
+    var head = rows.shift().map(function(h){ return h.trim().toLowerCase(); });
+    var col = function(r, name){ var i = head.indexOf(name); return i < 0 ? '' : (r[i] || '').trim(); };
+    return rows.map(function(r){ return { fecha: fecha(col(r,'fecha')), lugar: col(r,'sala'), ciudad: col(r,'ciudad'), con: col(r,'con'), entradas: col(r,'entradas') }; })
+      .filter(function(c){ return c.fecha; });
+  }
   if (location.protocol.indexOf('http') === 0) {
-    fetch('conciertos.json', {cache: 'no-store'}).then(function(r){ return r.ok ? r.json() : Promise.reject(); }).then(render).catch(function(){});
+    var json = function(){ return fetch('conciertos.json', {cache: 'no-store'}).then(function(r){ return r.ok ? r.json() : Promise.reject(); }); };
+    // hoja.txt contiene el enlace CSV de Google Sheets; si está vacío se usa conciertos.json
+    fetch('hoja.txt', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : ''; }).catch(function(){ return ''; })
+      .then(function(t){
+        var url = (SHEET_CSV || (t.match(/https:\/\/docs\.google\.com\/\S+/) || [''])[0]).trim();
+        return url ? fetch(url, {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); }).then(fromSheet) : json();
+      })
+      .then(render).catch(function(){});
   }
 })();
 (function(){
