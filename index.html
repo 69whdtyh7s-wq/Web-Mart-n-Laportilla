@@ -538,6 +538,23 @@ window.IG = {
 })();
 </script>
 
+<script>
+(function(){
+  // En móvil, abrir redes en su app: los enlaces https de estas webs son "universal links"
+  // y el sistema los abre en la app instalada; se quita target=_blank para no forzar el navegador.
+  if (!window.matchMedia || !matchMedia('(pointer: coarse)').matches) return;
+  var hosts = /(^|\.)(instagram\.com|spotify\.com|youtube\.com|youtu\.be|music\.apple\.com)$/;
+  function fix(root){
+    root.querySelectorAll('a[href^="https://"]').forEach(function(a){
+      try { if (hosts.test(new URL(a.href).hostname)) a.removeAttribute('target'); } catch(e) {}
+    });
+  }
+  fix(document);
+  document.addEventListener('langchange', function(){ fix(document); });
+  new MutationObserver(function(){ fix(document); }).observe(document.getElementById('shows') || document.body, {childList: true, subtree: true});
+})();
+</script>
+
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2aabeab1cc9e4a039cf20d11456ed9bd"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
