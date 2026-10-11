@@ -34,11 +34,11 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 
 /* portada */
 .hero{position:relative;min-height:min(86vh,48rem);display:flex;align-items:flex-end;overflow:hidden;background:var(--bg)}
-.hero img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 25%}
+.hero img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:45% 20%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 0%,rgba(19,17,14,.82) 22%,rgba(19,17,14,0) 50%)}
 @media (max-width:720px){
   .hero{display:block;min-height:0}
-  .hero img{position:relative;height:auto;aspect-ratio:4/5;object-position:52% 20%}
+  .hero img{position:relative;height:auto;aspect-ratio:4/5;object-position:46% 15%}
   .hero::after{bottom:auto;height:calc(100vw * 1.25)}
   .hero .wrap{margin-top:-6rem;padding-block:0 3rem}
 }
@@ -131,7 +131,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 </header>
 
 <div class="hero">
-  <img src="img/portada.jpg" alt="Martín Laportilla tocando el bajo en directo" width="1800" height="1202">
+  <img src="img/portada.jpg" alt="Martín Laportilla tocando el bajo en directo" width="1182" height="665">
   <div class="wrap" style="z-index:1">
     <span class="label">Bajista</span>
     <h1>Martín <em>Laportilla</em></h1>
