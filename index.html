@@ -151,6 +151,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 </head>
 <body>
 
+<script>
+(function(){
+  // Al recargar, empezar siempre arriba (sin restaurar el scroll ni saltar a #secciones)
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch(e) {}
+  if (location.hash) { try { history.replaceState(null, '', location.pathname + location.search); } catch(e) {} }
+  var top = function(){ window.scrollTo(0, 0); };
+  top(); window.addEventListener('load', top);
+})();
+</script>
 <header class="bar">
   <div class="wrap">
     <a class="logo" href="#" aria-label="Martín Laportilla, inicio">M<span>L</span></a>
