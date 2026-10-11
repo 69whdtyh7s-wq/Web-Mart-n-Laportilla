@@ -1,0 +1,23 @@
+[
+  {
+    "fecha": "2026-10-24",
+    "lugar": "Nombre de la sala",
+    "ciudad": "Ciudad",
+    "con": "Banda o artista",
+    "entradas": ""
+  },
+  {
+    "fecha": "2026-11-07",
+    "lugar": "Nombre de la sala",
+    "ciudad": "Ciudad",
+    "con": "Banda o artista",
+    "entradas": ""
+  },
+  {
+    "fecha": "2026-11-21",
+    "lugar": "Nombre del festival",
+    "ciudad": "Ciudad",
+    "con": "Banda o artista",
+    "entradas": ""
+  }
+]
