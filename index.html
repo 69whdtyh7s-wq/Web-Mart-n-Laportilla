@@ -35,16 +35,26 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 .bar ul a:hover{color:var(--fg)}
 
 /* portada */
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(2rem,5vw,4rem);align-items:center;padding-block:clamp(3rem,8vw,6rem)}
-.hero-text{min-width:0}
-.hero h1{margin:.9rem 0 0;font:italic 500 clamp(3rem,7vw,5.5rem)/.95 var(--serif);letter-spacing:-.015em;text-wrap:balance}
-.hero h1 em{font-style:italic;color:var(--accent);display:block}
-.hero p{margin:1.5rem 0 2rem;max-width:24rem;color:var(--muted)}
-.hero-photo{margin:0;min-width:0}
-.hero-photo img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:2000/1126;object-fit:cover}
+.hero{position:relative;min-height:min(88vh,52rem);display:flex;align-items:flex-end;overflow:hidden;background:#1b1712}
+.hero > img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:45% 25%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,20,15,.82) 0%,rgba(24,20,15,.35) 40%,rgba(24,20,15,0) 65%)}
+.hero-text{position:relative;z-index:1;width:100%;padding-block:clamp(3rem,7vw,5rem);color:#f4efe6}
+.hero .label{color:rgba(244,239,230,.75)}
+.hero h1{margin:.9rem 0 0;font:italic 500 clamp(3rem,8vw,6.5rem)/.95 var(--serif);letter-spacing:-.015em;text-wrap:balance}
+.hero h1 em{font-style:italic;color:#d9cba4;display:block}
+.hero p{margin:1.25rem 0 1.75rem;max-width:26rem;color:rgba(244,239,230,.85)}
+.hero .btn{border-color:#f4efe6;color:#f4efe6}
+.hero .btn:hover{background:#f4efe6;color:#2a2620}
 @media (max-width:720px){
-  .hero-grid{grid-template-columns:1fr;padding-block:2rem 3.5rem}
-  .hero-photo{order:-1}
+  .hero{display:block;min-height:0;background:var(--bg)}
+  .hero > img{position:relative;height:auto;aspect-ratio:4/5;object-position:46% 15%}
+  .hero::after{display:none}
+  .hero-text{color:var(--fg);padding-block:2rem 3.5rem}
+  .hero .label{color:var(--muted)}
+  .hero h1 em{color:var(--accent)}
+  .hero p{color:var(--muted)}
+  .hero .btn{border-color:var(--fg);color:var(--fg)}
+  .hero .btn:hover{background:var(--fg);color:var(--bg)}
 }
 .btn{display:inline-block;font:500 .75rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:1rem 1.5rem;border:1px solid var(--fg);transition:background .2s,color .2s}
 .btn:hover{background:var(--fg);color:var(--bg)}
@@ -140,14 +150,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 </header>
 
 <div class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <span class="label">Bajista</span>
-      <h1>Martín <em>Laportilla</em></h1>
-      <p>Bajo eléctrico para directo, estudio y producciones a distancia.</p>
-      <a class="btn" href="#contacto">Contratación</a>
-    </div>
-    <figure class="hero-photo"><img src="img/portada-hd.jpg" alt="Martín Laportilla grabando el bajo en estudio" width="2000" height="1126"></figure>
+  <img src="img/portada-hd.jpg" alt="Martín Laportilla grabando el bajo en estudio" width="2000" height="1126">
+  <div class="wrap hero-text">
+    <span class="label">Bajista</span>
+    <h1>Martín <em>Laportilla</em></h1>
+    <p>Bajo eléctrico para directo, estudio y producciones a distancia.</p>
+    <a class="btn" href="#contacto">Contratación</a>
   </div>
 </div>
 
