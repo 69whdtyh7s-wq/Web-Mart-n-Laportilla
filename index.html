@@ -40,9 +40,9 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 .lang button:hover{color:var(--fg)}
 
 /* portada */
-.hero{position:relative;aspect-ratio:2000/1126;max-height:calc(100vh - 3.5rem);width:100%;display:flex;align-items:flex-end;overflow:hidden;background:#1b1712}
+.hero{position:relative;aspect-ratio:1248/832;max-height:calc(100vh - 3.5rem);width:100%;display:flex;align-items:flex-end;overflow:hidden;background:#1b1712}
 @supports not (aspect-ratio:1){.hero{min-height:56vw}}
-.hero > img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 55%}
+.hero > img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:60% 40%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,20,15,.7) 0%,rgba(24,20,15,0) 38%),linear-gradient(90deg,rgba(24,20,15,.55) 0%,rgba(24,20,15,0) 40%)}
 .hero-text{position:relative;z-index:1;width:100%;padding-block:clamp(1.5rem,5vw,5rem);color:#f4efe6}
 .hero .label{color:rgba(244,239,230,.75)}
@@ -76,7 +76,7 @@ h2{margin:0;font:500 clamp(2.2rem,6vw,3.4rem)/1 var(--serif)}
 h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 
 .bio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(1.5rem,5vw,4rem);align-items:start}
-.portrait{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:72% 50%;background:var(--raise)}
+.portrait{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:45% 50%;background:var(--raise)}
 .bio p{margin:0 0 1.2rem;max-width:36rem}
 .bio .lead{font:400 1.5rem/1.45 var(--serif)}
 
@@ -168,7 +168,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 </header>
 
 <div class="hero">
-  <img src="img/portada-hd.jpg" alt="Martín Laportilla grabando el bajo en estudio" width="2000" height="1126">
+  <img src="img/bio.jpg" alt="Martín Laportilla tocando un Fender Jazz Bass en concierto" width="1248" height="832">
   <div class="wrap hero-text">
     <span class="label" data-i18n="bassist">Bajista</span>
     <h1>Martín <em>Laportilla</em></h1>
@@ -181,7 +181,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   <div class="wrap">
     <div class="sh"><h2>Bio</h2><span class="label" data-i18n="about">Sobre mí</span></div>
     <div class="bio">
-      <img class="portrait" src="img/bio.jpg" alt="Martín Laportilla tocando un Fender Jazz Bass en concierto" width="1248" height="832" loading="lazy">
+      <img class="portrait" src="img/portada-hd.jpg" alt="Martín Laportilla grabando el bajo en estudio" width="2000" height="1126" loading="lazy">
       <div>
         <p class="lead" data-i18n="bio0">Bajista argentino afincado en Barcelona desde 1999. Su lenguaje une jazz, soul, pop, música brasileña y ritmos latinos, con un sonido marcado por la riqueza rítmica, la precisión y la sensibilidad.</p>
         <p data-i18n="bio1">Ha tocado con artistas como Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío y Nella Rojas, y ha grabado junto a Paquito D'Rivera, Bobby Shew, Luis Salinas y Perico Sambeat, entre otros.</p>
