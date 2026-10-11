@@ -7,18 +7,18 @@
 <meta name="description" content="Martín Laportilla, bajista profesional. Directos, música, vídeos, equipo y contratación.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Figtree:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: web de artista de una sola página, como las de Nathan East o Marcus Miller. Foto a sangre en la portada, menú fijo, secciones Bio / Directos / Música / Vídeos / Equipo / Contacto. Oscura a propósito, como el escenario. */
+/* Layout: web de artista de una sola página (Bio / Directos / Música / Vídeos / Equipo / Contacto). Estilo "Cálido": arena, madera y verde oliva, una sola versión clara a propósito. */
 :root{
-  --bg:#13110e; --raise:#1c1915; --fg:#efebe4; --muted:#a59e93; --line:#2f2a24; --accent:#d8b77f;
-  --serif:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
-  --sans:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
-  color-scheme:dark;
+  --bg:#ece5d8; --raise:#e3dacb; --fg:#2a2620; --muted:#6f6758; --line:#d3c8b5; --accent:#5f6b3a;
+  --serif:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--fg);font:300 1.0625rem/1.75 var(--sans);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.75 var(--sans);-webkit-font-smoothing:antialiased}
 .wrap{max-width:64rem;margin:0 auto;padding-inline:clamp(1.25rem,5vw,3rem)}
 a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-offset:4px}
@@ -37,7 +37,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 /* portada */
 .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(2rem,5vw,4rem);align-items:center;padding-block:clamp(3rem,8vw,6rem)}
 .hero-text{min-width:0}
-.hero h1{margin:.9rem 0 0;font:400 clamp(3rem,7vw,5.5rem)/.95 var(--serif);letter-spacing:-.01em;text-wrap:balance}
+.hero h1{margin:.9rem 0 0;font:italic 500 clamp(3rem,7vw,5.5rem)/.95 var(--serif);letter-spacing:-.015em;text-wrap:balance}
 .hero h1 em{font-style:italic;color:var(--accent);display:block}
 .hero p{margin:1.5rem 0 2rem;max-width:24rem;color:var(--muted)}
 .hero-photo{margin:0;min-width:0}
@@ -56,11 +56,11 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 /* secciones */
 section{padding-block:clamp(4.5rem,10vw,7rem);border-top:1px solid var(--line)}
 .sh{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
-h2{margin:0;font:400 clamp(2.2rem,6vw,3.4rem)/1 var(--serif)}
+h2{margin:0;font:500 clamp(2.2rem,6vw,3.4rem)/1 var(--serif)}
 h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 
 .bio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(1.5rem,5vw,4rem);align-items:start}
-.portrait{aspect-ratio:4/5;max-width:100%;background:linear-gradient(160deg,#26272b,#141518);display:grid;place-items:end start;padding:1rem}
+.portrait{aspect-ratio:4/5;max-width:100%;background:linear-gradient(160deg,#ddd3c2,#cfc3ae);display:grid;place-items:end start;padding:1rem}
 .bio p{margin:0 0 1.2rem;max-width:36rem}
 .bio .lead{font:400 1.5rem/1.45 var(--serif)}
 
@@ -82,8 +82,8 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 /* vídeos */
 .videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
 .video{display:grid;gap:.75rem;min-width:0}
-.thumb{aspect-ratio:16/9;max-width:100%;background:linear-gradient(135deg,#222327,#121315);display:grid;place-items:center;transition:opacity .2s}
-.thumb i{width:3rem;height:3rem;border:1px solid var(--fg);background:rgba(15,16,18,.55);border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:.8rem;padding-left:.15rem}
+.thumb{aspect-ratio:16/9;max-width:100%;background:linear-gradient(135deg,#d9cfbd,#c9bca6);display:grid;place-items:center;transition:opacity .2s}
+.thumb i{width:3rem;height:3rem;border:1px solid var(--fg);background:rgba(236,229,216,.8);color:var(--fg);border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:.8rem;padding-left:.15rem}
 .video:hover .thumb{opacity:.8}
 .video h3{font-size:1.1rem}
 
@@ -197,7 +197,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   <div class="wrap">
     <div class="sh"><h2>Vídeos</h2><a class="label" href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener">Ver más en Instagram ↗</a></div>
     <div class="videos">
-      <a class="video" href="https://www.youtube.com/watch?v=5zkQnwMKlJU" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/5zkQnwMKlJU/hqdefault.jpg'),linear-gradient(135deg,#222327,#121315);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Portrait of Jaco</h3><span class="label">YouTube</span></a>
+      <a class="video" href="https://www.youtube.com/watch?v=5zkQnwMKlJU" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/5zkQnwMKlJU/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Portrait of Jaco</h3><span class="label">YouTube</span></a>
       <a class="video" href="#"><div class="thumb"><i aria-hidden="true">▶</i></div><h3>Sesión de estudio</h3><span class="label">YouTube</span></a>
       <a class="video" href="#"><div class="thumb"><i aria-hidden="true">▶</i></div><h3>Bass cam · Nombre del tema</h3><span class="label">Instagram</span></a>
     </div>
