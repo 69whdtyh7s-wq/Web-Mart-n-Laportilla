@@ -11,7 +11,7 @@
 <style>
 /* Layout: web de artista de una sola página, como las de Nathan East o Marcus Miller. Foto a sangre en la portada, menú fijo, secciones Bio / Directos / Música / Vídeos / Equipo / Contacto. Oscura a propósito, como el escenario. */
 :root{
-  --bg:#0f1012; --raise:#17181b; --fg:#ecebe7; --muted:#9a9894; --line:#2a2b2f; --accent:#c8b48a;
+  --bg:#0c0f14; --raise:#141821; --fg:#ecebe7; --muted:#9b9da3; --line:#232835; --accent:#c8b48a;
   --serif:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
   --sans:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme:dark;
@@ -33,12 +33,9 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 .bar ul a:hover{color:var(--fg)}
 
 /* portada */
-.hero{position:relative;min-height:min(78vh,44rem);display:flex;align-items:flex-end;overflow:hidden;
-  background:
-    radial-gradient(60% 70% at 72% 35%, #3a362f 0%, transparent 70%),
-    radial-gradient(40% 50% at 20% 80%, #22252b 0%, transparent 70%),
-    linear-gradient(180deg,#121316 0%,#0b0c0e 100%)}
-.hero .ph{position:absolute;top:1.25rem;right:clamp(1.25rem,5vw,3rem)}
+.hero{position:relative;min-height:min(82vh,46rem);display:flex;align-items:flex-end;overflow:hidden;background:#0a0d14}
+.hero img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:55% 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 0%,rgba(12,15,20,.75) 28%,rgba(12,15,20,0) 60%)}
 .hero .wrap{position:relative;width:100%;padding-block:clamp(3rem,8vw,5rem)}
 .hero h1{margin:.9rem 0 0;font:400 clamp(3.2rem,12vw,8rem)/.92 var(--serif);letter-spacing:-.01em;text-wrap:balance}
 .hero h1 em{font-style:italic;color:var(--accent)}
@@ -128,8 +125,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 </header>
 
 <div class="hero">
-  <span class="label ph">Aquí va tu foto principal, a sangre</span>
-  <div class="wrap">
+  <img src="img/portada.jpg" alt="Martín Laportilla tocando el bajo en directo" width="1086" height="724">
+  <div class="wrap" style="z-index:1">
     <span class="label">Bajista</span>
     <h1>Martín <em>Laportilla</em></h1>
     <div class="row">
