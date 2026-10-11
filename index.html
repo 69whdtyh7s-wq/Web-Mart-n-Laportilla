@@ -27,9 +27,9 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 /* menú */
 .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:.75rem 1.5rem;flex-wrap:wrap;padding-block:1rem}
-.logo{display:inline-flex;color:var(--accent);transition:opacity .2s}
-.logo:hover{opacity:.8}
-.logo svg{display:block}
+.logo{display:inline-flex;align-items:baseline;font:400 1.6rem/1 var(--serif);letter-spacing:.02em;color:var(--fg);transition:color .2s}
+.logo span{font-style:italic;color:var(--accent);margin-left:.02em}
+.logo:hover{color:var(--accent)}
 .bar ul{display:flex;gap:.5rem 1.4rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
 .bar ul a{font:500 .7rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:color .2s}
 .bar ul a:hover{color:var(--fg)}
@@ -127,7 +127,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 
 <header class="bar">
   <div class="wrap">
-    <a class="logo" href="#" aria-label="Martín Laportilla, inicio"><svg viewBox="0 0 52 24" width="52" height="24" aria-hidden="true"><rect x="0" y="10.5" width="19" height="4" rx="1" fill="currentColor" opacity=".55"/><rect x="18.5" y="9.6" width="1.6" height="5.8" fill="currentColor"/><path d="M20 9.6 L43 6.2 Q50 5.4 50 10.5 L50 13 Q50 17.2 44.5 17 L20 15.4 Z" fill="currentColor"/><g stroke="currentColor" stroke-width="1.2"><line x1="25" y1="8.9" x2="25" y2="4.6"/><line x1="31" y1="8" x2="31" y2="3.7"/><line x1="37" y1="7.1" x2="37" y2="2.8"/><line x1="43" y1="6.2" x2="43" y2="1.9"/></g><g fill="currentColor"><ellipse cx="25" cy="3.4" rx="2.3" ry="1.4"/><ellipse cx="31" cy="2.5" rx="2.3" ry="1.4"/><ellipse cx="37" cy="1.8" rx="2.3" ry="1.3"/><ellipse cx="43" cy="1.4" rx="2.3" ry="1.2"/></g><g fill="var(--bg)"><circle cx="25" cy="11.6" r=".9"/><circle cx="31" cy="11.2" r=".9"/><circle cx="37" cy="10.8" r=".9"/><circle cx="43" cy="10.4" r=".9"/></g></svg></a>
+    <a class="logo" href="#" aria-label="Martín Laportilla, inicio">M<span>L</span></a>
     <ul>
       <li><a href="#bio">Bio</a></li>
       <li><a href="#directos">Directos</a></li>
