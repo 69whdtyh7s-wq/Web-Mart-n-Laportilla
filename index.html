@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Martín Laportilla</title>
+<meta name="description" content="Martín Laportilla, bajista profesional. Directo, estudio, grabación remota y clases.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Figtree:wght@300;400;500&display=swap">
+<style>
+/* Layout: columna estrecha y asimétrica, mucho aire, filetes finos. Una serif ligera para el nombre; todo lo demás, sans discreta. */
+:root{
+  --bg:#f5f5f3; --fg:#1b1d1f; --muted:#6c7074; --line:#d8d9d6; --accent:#5b6b5e; --surface:#ebecea;
+  --serif:"Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --sans:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#161718; --fg:#e9e9e6; --muted:#9a9d9f; --line:#2e3031; --accent:#9fb1a2; --surface:#1e2021; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161718; --fg:#e9e9e6; --muted:#9a9d9f; --line:#2e3031; --accent:#9fb1a2; --surface:#1e2021; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:300 1.0625rem/1.75 var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:60rem;margin:0 auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:1px solid var(--fg);outline-offset:4px}
+.label{font:500 .72rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-block:2rem}
+nav .mark{font:500 1.25rem/1 var(--serif);letter-spacing:.02em}
+nav ul{display:flex;gap:2rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{font:400 .85rem/1 var(--sans);color:var(--muted);transition:color .2s}
+nav ul a:hover{color:var(--fg)}
+
+.hero{padding-block:clamp(4rem,12vw,8rem) clamp(4rem,10vw,7rem)}
+.hero h1{margin:1.5rem 0 0;font:400 clamp(3.4rem,11vw,7rem)/.95 var(--serif);letter-spacing:-.015em}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{margin:2rem 0 0;max-width:30rem;font-size:1.15rem;color:var(--muted)}
+.link{display:inline-flex;gap:.6rem;align-items:center;margin-top:2.5rem;font:400 .95rem/1 var(--sans);padding-bottom:.35rem;border-bottom:1px solid var(--fg)}
+.link:hover{color:var(--accent);border-color:var(--accent)}
+
+.photo{aspect-ratio:16/9;max-width:100%;background:var(--surface);display:grid;place-items:center}
+
+section{padding-block:clamp(4rem,10vw,7rem);border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:clamp(1.5rem,5vw,4rem)}
+h2{margin:0;font:400 clamp(2rem,5vw,2.75rem)/1.05 var(--serif)}
+.body p{margin:0 0 1.25rem;max-width:36rem}
+.body p.lead{font:400 clamp(1.4rem,3vw,1.75rem)/1.4 var(--serif);color:var(--fg)}
+
+.list{margin:0;padding:0;list-style:none}
+.list li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.5rem;padding-block:1.5rem;border-bottom:1px solid var(--line)}
+.list li:first-child{padding-top:0}
+.list h3{margin:0;font:400 1.5rem/1.2 var(--serif)}
+.list p{margin:0;color:var(--muted)}
+
+.credits li{grid-template-columns:minmax(0,1fr) auto;align-items:baseline}
+.credits h3{font-size:1.35rem}
+
+.contact .big{display:block;font:400 clamp(1.6rem,5vw,2.6rem)/1.2 var(--serif);word-break:break-word;margin-bottom:1rem}
+.actions{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+.copy{background:none;border:0;border-bottom:1px solid var(--fg);color:var(--fg);font:400 .95rem/1 var(--sans);padding:0 0 .35rem;cursor:pointer}
+.copy:hover,.actions a:hover{color:var(--accent);border-color:var(--accent)}
+.actions a{font:400 .95rem/1 var(--sans);padding-bottom:.35rem;border-bottom:1px solid var(--line)}
+
+footer{padding-block:2.5rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+@media (max-width:680px){
+  .row,.list li{grid-template-columns:1fr;gap:.75rem}
+  .credits li{grid-template-columns:1fr}
+  .photo{aspect-ratio:4/3}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a class="mark" href="#">Martín Laportilla</a>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#trayectoria">Trayectoria</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <span class="label">Bajista</span>
+    <h1>Martín<br><em>Laportilla</em></h1>
+    <p>Bajo eléctrico para directo, estudio y producciones a distancia.</p>
+    <a class="link" href="#contacto">Contacto <span aria-hidden="true">→</span></a>
+  </header>
+
+  <div class="photo"><span class="label">Fotografía horizontal</span></div>
+</div>
+
+<section id="sobre-mi">
+  <div class="wrap row">
+    <div><span class="label">Sobre mí</span></div>
+    <div class="body">
+      <p class="lead">Músico profesional centrado en el bajo eléctrico, con experiencia en escenario y estudio.</p>
+      <p>Trabajo con bandas, artistas y productores, adaptando el sonido y la interpretación a lo que necesita cada proyecto.</p>
+      <p>Aquí irá tu bio en dos o tres líneas: tu formación, los estilos en los que te mueves y desde dónde trabajas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap row">
+    <div><span class="label">Servicios</span></div>
+    <ul class="list">
+      <li><h3>Directo</h3><p>Conciertos, giras y sustituciones, con repertorio preparado y equipo propio.</p></li>
+      <li><h3>Estudio</h3><p>Grabación para discos y singles, a partir de partitura o de la maqueta.</p></li>
+      <li><h3>Grabación remota</h3><p>Pistas de bajo grabadas en mi estudio y entregadas listas para mezclar.</p></li>
+      <li><h3>Clases</h3><p>Clases particulares, presenciales u online, para todos los niveles.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="trayectoria">
+  <div class="wrap row">
+    <div><span class="label">Trayectoria</span></div>
+    <ul class="list credits">
+      <li><h3>Banda o artista</h3><span class="label">Directo · 2025</span></li>
+      <li><h3>Banda o artista</h3><span class="label">Grabación</span></li>
+      <li><h3>Banda o artista</h3><span class="label">Gira · 2024</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap row">
+    <div><span class="label">Contacto</span></div>
+    <div>
+      <span class="big" id="mail">hola@martinlaportilla.com</span>
+      <div class="actions">
+        <button class="copy" type="button" id="copy-mail">Copiar email</button>
+        <a href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer><span class="label">© 2026 Martín Laportilla</span><span class="label">martinlaportilla.com</span></footer>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('copy-mail'), el = document.getElementById('mail');
+  btn.addEventListener('click', function(){
+    var done = function(){ btn.textContent = 'Copiado'; setTimeout(function(){ btn.textContent = 'Copiar email'; }, 1600); };
+    var fallback = function(){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(el.textContent.trim()).then(done, fallback); } catch(e){ fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
