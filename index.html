@@ -76,7 +76,7 @@ h2{margin:0;font:500 clamp(2.2rem,6vw,3.4rem)/1 var(--serif)}
 h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 
 .bio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(1.5rem,5vw,4rem);align-items:start}
-.portrait{aspect-ratio:4/5;max-width:100%;background:linear-gradient(160deg,#ddd3c2,#cfc3ae);display:grid;place-items:end start;padding:1rem}
+.portrait{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:72% 50%;background:var(--raise)}
 .bio p{margin:0 0 1.2rem;max-width:36rem}
 .bio .lead{font:400 1.5rem/1.45 var(--serif)}
 
@@ -141,7 +141,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 
 @media (max-width:720px){
   .bio,.release,.gear,.contacts{grid-template-columns:1fr}
-  .portrait{aspect-ratio:3/2}
+  .portrait{aspect-ratio:3/2;object-position:center}
   .videos{grid-template-columns:1fr}
   .shows li{grid-template-columns:4.5rem minmax(0,1fr)}
   .shows li .btn{grid-column:2;justify-self:start}
@@ -181,7 +181,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   <div class="wrap">
     <div class="sh"><h2>Bio</h2><span class="label" data-i18n="about">Sobre mí</span></div>
     <div class="bio">
-      <div class="portrait"><span class="label" data-i18n="portrait">Retrato vertical</span></div>
+      <img class="portrait" src="img/bio.jpg" alt="Martín Laportilla tocando un Fender Jazz Bass en concierto" width="1248" height="832" loading="lazy">
       <div>
         <p class="lead" data-i18n="bio0">Bajista argentino afincado en Barcelona desde 1999. Su lenguaje une jazz, soul, pop, música brasileña y ritmos latinos, con un sonido marcado por la riqueza rítmica, la precisión y la sensibilidad.</p>
         <p data-i18n="bio1">Ha tocado con artistas como Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío y Nella Rojas, y ha grabado junto a Paquito D'Rivera, Bobby Shew, Luis Salinas y Perico Sambeat, entre otros.</p>
