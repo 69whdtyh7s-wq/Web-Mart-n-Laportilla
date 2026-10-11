@@ -164,7 +164,13 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 .endorse-in p{margin:0;color:var(--muted)}
 
 .player{margin-bottom:2rem}
-.player iframe{display:block;background:var(--raise)}
+.player-tabs{display:flex;gap:.25rem;margin-bottom:.75rem}
+.player-tabs button{background:none;border:1px solid var(--line);color:var(--muted);font:500 .7rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:.6rem .9rem;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.player-tabs button[aria-selected="true"]{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.player-tabs button:hover{color:var(--fg);border-color:var(--fg)}
+.player-tabs button[aria-selected="true"]:hover{color:var(--bg)}
+.pl{display:block;width:100%;max-width:100%;border:0;border-radius:12px;background:var(--raise)}
+.pl[hidden]{display:none}
 
 /* fotos */
 .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
@@ -302,7 +308,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   <div class="wrap">
     <div class="sh"><h2 data-i18n="nav_video">Música</h2><a class="label" href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener" data-i18n="moreig">Ver más en Instagram ↗</a></div>
     <div class="player">
-      <iframe title="Milonjazz – Apple Music" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:100%;overflow:hidden;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/es/album/milonjazz-feat-federico-mazzanti-ernesto-aurignac-gabriel/1225576048?i=1225576053" loading="lazy"></iframe>
+      <div class="player-tabs" role="tablist">
+        <button type="button" role="tab" data-p="spotify" aria-selected="true">Spotify</button>
+        <button type="button" role="tab" data-p="apple" aria-selected="false">Apple Music</button>
+      </div>
+      <iframe class="pl" data-p="spotify" title="Milonjazz – Spotify" src="https://open.spotify.com/embed/track/5csQsy9Igh7OOomPitC3Q7?utm_source=generator" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe class="pl" data-p="apple" title="Milonjazz – Apple Music" data-src="https://embed.music.apple.com/es/album/milonjazz-feat-federico-mazzanti-ernesto-aurignac-gabriel/1225576048?i=1225576053" height="175" frameborder="0" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" hidden></iframe>
     </div>
     <div class="videos">
       <a class="video" href="https://www.youtube.com/watch?v=rFVY3guretA" target="_blank" rel="noopener" data-yt="rFVY3guretA"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/rFVY3guretA/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Saulo · Não Precisa Mudar</h3><span class="label">YouTube</span></a>
@@ -559,6 +570,19 @@ window.IG = {
   fix(document);
   document.addEventListener('langchange', function(){ fix(document); });
   new MutationObserver(function(){ fix(document); }).observe(document.getElementById('shows') || document.body, {childList: true, subtree: true});
+})();
+</script>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.player-tabs button'), frames = document.querySelectorAll('.pl');
+  function sel(p){
+    tabs.forEach(function(t){ t.setAttribute('aria-selected', t.dataset.p === p ? 'true' : 'false'); });
+    frames.forEach(function(f){ var on = f.dataset.p === p; if (on && f.dataset.src && !f.src) f.src = f.dataset.src; f.hidden = !on; });
+    try { localStorage.setItem('player', p); } catch(e) {}
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ sel(t.dataset.p); }); });
+  try { var saved = localStorage.getItem('player'); if (saved === 'apple') sel('apple'); } catch(e) {}
 })();
 </script>
 
