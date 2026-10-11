@@ -181,7 +181,10 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 /* contacto */
 .contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 3rem}
 .contacts > div{display:grid;gap:.6rem;align-content:start;min-width:0}
-.contacts .stream{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
+.icons{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.3rem}
+.icon-btn{display:grid;place-items:center;width:3rem;height:3rem;border:1px solid var(--line);border-radius:50%;color:var(--fg);transition:color .2s,border-color .2s,transform .2s}
+.icon-btn svg{width:1.35rem;height:1.35rem;display:block}
+.icon-btn:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
 .contacts .v{font:400 clamp(1.15rem,3vw,1.45rem)/1.3 var(--serif);word-break:break-word}
 .contacts .ig{display:inline-flex;align-items:center;gap:.55rem;font:400 clamp(1.15rem,3vw,1.45rem)/1.3 var(--serif);letter-spacing:0;transition:color .2s}
 .ig svg{flex:none;width:1.1em;height:1.1em;border-radius:.26em}
@@ -360,13 +363,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
       </div>
       <div>
         <span class="label" data-i18n="social">Redes y música</span>
-        <a class="v ig" href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><defs><radialGradient id="igg" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#igg)"/><g fill="none" stroke="#fff" stroke-width="1.7"><rect x="5" y="5" width="14" height="14" rx="4"/><circle cx="12" cy="12" r="3.3"/></g><circle cx="16.2" cy="7.8" r=".95" fill="#fff"/></svg>@martinlaportilla</a>
-        <div class="stream">
-        <a class="btn small" href="https://open.spotify.com/search/Mart%C3%ADn%20Laportilla" target="_blank" rel="noopener">Spotify</a>
-        <a class="btn small" href="https://music.apple.com/search?term=Mart%C3%ADn%20Laportilla" target="_blank" rel="noopener">Apple Music</a>
-        <a class="btn small" href="https://www.youtube.com/@martinchococo/videos" target="_blank" rel="noopener">YouTube</a>
-        <a class="btn small" href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener">Instagram</a>
-    </div>
+        <div class="icons">
+          <a class="icon-btn" href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/></svg></a>
+          <a class="icon-btn" href="https://open.spotify.com/search/Mart%C3%ADn%20Laportilla" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><g fill="none" stroke="var(--bg)" stroke-width="1.7" stroke-linecap="round"><path d="M6.6 9.4c3.7-1.1 7.8-.8 11 1"/><path d="M7.2 12.5c3-.8 6.2-.5 8.8.9"/><path d="M7.8 15.4c2.3-.6 4.6-.4 6.6.7"/></g></svg></a>
+          <a class="icon-btn" href="https://music.apple.com/search?term=Mart%C3%ADn%20Laportilla" target="_blank" rel="noopener" aria-label="Apple Music" title="Apple Music"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3.2v12.3a3 3 0 1 1-1.8-2.75V7.6l-8 1.7v8.2a3 3 0 1 1-1.8-2.75V5.6z"/></svg></a>
+          <a class="icon-btn" href="https://www.youtube.com/@martinchococo/videos" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9v6l5.2-3z" fill="var(--bg)"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
