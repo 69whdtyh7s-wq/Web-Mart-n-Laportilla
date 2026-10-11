@@ -34,6 +34,11 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 .bar ul a{font:500 .7rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:color .2s}
 .bar ul a:hover{color:var(--fg)}
 
+.lang{display:flex;gap:.15rem}
+.lang button{background:none;border:0;padding:.3rem .35rem;font:500 .68rem/1 var(--sans);letter-spacing:.14em;color:var(--muted);cursor:pointer}
+.lang button[aria-pressed="true"]{color:var(--fg);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--accent)}
+.lang button:hover{color:var(--fg)}
+
 /* portada */
 .hero{position:relative;aspect-ratio:2000/1126;max-height:calc(100vh - 3.5rem);width:100%;display:flex;align-items:flex-end;overflow:hidden;background:#1b1712}
 @supports not (aspect-ratio:1){.hero{min-height:56vw}}
@@ -151,36 +156,37 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
     <a class="logo" href="#" aria-label="Martín Laportilla, inicio">M<span>L</span></a>
     <ul>
       <li><a href="#bio">Bio</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#directos">Directos</a></li>
-      <li><a href="#musica">Música</a></li>
-      <li><a href="#videos">Vídeos</a></li>
-      <li><a href="#equipo">Equipo</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#proyectos" data-i18n="nav_proj">Proyectos</a></li>
+      <li><a href="#directos" data-i18n="nav_live">Directos</a></li>
+      <li><a href="#musica" data-i18n="nav_music">Música</a></li>
+      <li><a href="#videos" data-i18n="nav_video">Vídeos</a></li>
+      <li><a href="#equipo" data-i18n="nav_gear">Equipo</a></li>
+      <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
     </ul>
+    <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="en">EN</button><button type="button" data-lang="ca">CA</button><button type="button" data-lang="pt">PT</button></div>
   </div>
 </header>
 
 <div class="hero">
   <img src="img/portada-hd.jpg" alt="Martín Laportilla grabando el bajo en estudio" width="2000" height="1126">
   <div class="wrap hero-text">
-    <span class="label">Bajista</span>
+    <span class="label" data-i18n="bassist">Bajista</span>
     <h1>Martín <em>Laportilla</em></h1>
-    <p>Bajo eléctrico para directo, estudio y producciones a distancia.</p>
-    <a class="btn" href="#contacto">Contratación</a>
+    <p data-i18n="tagline">Bajo eléctrico para directo, estudio y producciones a distancia.</p>
+    <a class="btn" href="#contacto" data-i18n="booking">Contratación</a>
   </div>
 </div>
 
 <section id="bio">
   <div class="wrap">
-    <div class="sh"><h2>Bio</h2><span class="label">Sobre mí</span></div>
+    <div class="sh"><h2>Bio</h2><span class="label" data-i18n="about">Sobre mí</span></div>
     <div class="bio">
-      <div class="portrait"><span class="label">Retrato vertical</span></div>
+      <div class="portrait"><span class="label" data-i18n="portrait">Retrato vertical</span></div>
       <div>
-        <p class="lead">Bajista argentino afincado en Barcelona desde 1999. Su lenguaje une jazz, soul, pop, música brasileña y ritmos latinos, con un sonido marcado por la riqueza rítmica, la precisión y la sensibilidad.</p>
-        <p>Ha tocado con artistas como Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío y Nella Rojas, y ha grabado junto a Paquito D'Rivera, Bobby Shew, Luis Salinas y Perico Sambeat, entre otros.</p>
-        <p>En la escena española ha compartido escenario con Rita Payés, Lucía Fumero, Juan Gómez «Chicuelo», Llibert Fortuny, Albert Bover y Raynald Colom. Hoy forma parte de varios proyectos en Barcelona, con los que actúa en festivales y clubes de todo el mundo.</p>
-        <p>Es artista D'Addario.</p>
+        <p class="lead" data-i18n="bio0">Bajista argentino afincado en Barcelona desde 1999. Su lenguaje une jazz, soul, pop, música brasileña y ritmos latinos, con un sonido marcado por la riqueza rítmica, la precisión y la sensibilidad.</p>
+        <p data-i18n="bio1">Ha tocado con artistas como Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío y Nella Rojas, y ha grabado junto a Paquito D'Rivera, Bobby Shew, Luis Salinas y Perico Sambeat, entre otros.</p>
+        <p data-i18n="bio2">En la escena española ha compartido escenario con Rita Payés, Lucía Fumero, Juan Gómez «Chicuelo», Llibert Fortuny, Albert Bover y Raynald Colom. Hoy forma parte de varios proyectos en Barcelona, con los que actúa en festivales y clubes de todo el mundo.</p>
+        <p data-i18n="bio3">Es artista D'Addario.</p>
       </div>
     </div>
   </div>
@@ -188,7 +194,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 
 <section id="proyectos">
   <div class="wrap">
-    <div class="sh"><h2>Proyectos</h2><span class="label">Bandas y artistas</span></div>
+    <div class="sh"><h2 data-i18n="nav_proj">Proyectos</h2><span class="label" data-i18n="bands">Bandas y artistas</span></div>
     <ul class="projects">
       <li><div><h3>Nombre de la banda o artista</h3><p>Estilo · una línea sobre el proyecto y tu papel en él.</p></div><span class="label">Directo y estudio · 2024–hoy</span></li>
       <li><div><h3>Nombre de la banda o artista</h3><p>Estilo · una línea sobre el proyecto y tu papel en él.</p></div><span class="label">Gira · 2025</span></li>
@@ -199,16 +205,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 
 <section id="directos">
   <div class="wrap">
-    <div class="sh"><h2>Directos</h2><span class="label">Próximas fechas</span></div>
+    <div class="sh"><h2 data-i18n="nav_live">Directos</h2><span class="label" data-i18n="upcoming">Próximas fechas</span></div>
     <ul class="shows" id="shows"></ul>
-    <p class="note" id="shows-empty" hidden>No hay fechas anunciadas ahora mismo. Para contratación, escríbeme.</p>
+    <p class="note" id="shows-empty" hidden data-i18n="nodates">No hay fechas anunciadas ahora mismo. Para contratación, escríbeme.</p>
     <script id="shows-data" type="application/json">[{"fecha": "2026-10-24", "lugar": "Nombre de la sala", "ciudad": "Ciudad", "con": "Banda o artista", "entradas": ""}, {"fecha": "2026-11-07", "lugar": "Nombre de la sala", "ciudad": "Ciudad", "con": "Banda o artista", "entradas": ""}, {"fecha": "2026-11-21", "lugar": "Nombre del festival", "ciudad": "Ciudad", "con": "Banda o artista", "entradas": ""}]</script>
   </div>
 </section>
 
 <section id="musica">
   <div class="wrap">
-    <div class="sh"><h2>Música</h2><span class="label">Último lanzamiento</span></div>
+    <div class="sh"><h2 data-i18n="nav_music">Música</h2><span class="label" data-i18n="latest">Último lanzamiento</span></div>
     <div class="release">
       <div>
         <span class="label">Disco · Año</span>
@@ -227,7 +233,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 
 <section id="videos">
   <div class="wrap">
-    <div class="sh"><h2>Vídeos</h2><a class="label" href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener">Ver más en Instagram ↗</a></div>
+    <div class="sh"><h2 data-i18n="nav_video">Vídeos</h2><a class="label" href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener" data-i18n="moreig">Ver más en Instagram ↗</a></div>
     <div class="videos">
       <a class="video" href="https://www.youtube.com/watch?v=5zkQnwMKlJU" target="_blank" rel="noopener" data-yt="5zkQnwMKlJU"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/5zkQnwMKlJU/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Portrait of Jaco</h3><span class="label">YouTube</span></a>
       <a class="video" href="#"><div class="thumb"><i aria-hidden="true">▶</i></div><h3>Sesión de estudio</h3><span class="label">YouTube</span></a>
@@ -238,35 +244,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 
 <section id="equipo">
   <div class="wrap">
-    <div class="sh"><h2>Equipo</h2><span class="label">Gear</span></div>
+    <div class="sh"><h2 data-i18n="nav_gear">Equipo</h2><span class="label">Gear</span></div>
     <dl class="gear">
-      <div><dt class="label">Bajo</dt><dd>Fender Jazz Bass 1973</dd></div>
-      <div><dt class="label">Bajo 5 cuerdas</dt><dd>Fender Jazz Bass American Deluxe V</dd></div>
+      <div><dt class="label" data-i18n="bass">Bajo</dt><dd>Fender Jazz Bass 1973</dd></div>
+      <div><dt class="label" data-i18n="bass5">Bajo 5 cuerdas</dt><dd>Fender Jazz Bass American Deluxe V</dd></div>
       <div><dt class="label">Preamp</dt><dd>Darkglass Anagram</dd></div>
-      <div><dt class="label">Cuerdas</dt><dd>D'Addario XS · .045</dd></div>
+      <div><dt class="label" data-i18n="strings">Cuerdas</dt><dd>D'Addario XS · .045</dd></div>
     </dl>
   </div>
 </section>
 
 <section id="endorsements" class="endorse">
   <div class="wrap">
-    <span class="label">Artista oficial</span>
+    <span class="label" data-i18n="official">Artista oficial</span>
     <a class="endorse-logo" href="https://www.daddario.com/" target="_blank" rel="noopener"><img src="img/daddario-claro.png" alt="D'Addario" width="640" height="117"></a>
-    <p>Toco con cuerdas D'Addario XS, calibre .045.</p>
+    <p data-i18n="iplay">Toco con cuerdas D'Addario XS, calibre .045.</p>
   </div>
 </section>
 
 <section id="contacto">
   <div class="wrap">
-    <div class="sh"><h2>Contacto</h2><span class="label">Contratación y prensa</span></div>
+    <div class="sh"><h2 data-i18n="nav_contact">Contacto</h2><span class="label" data-i18n="press">Contratación y prensa</span></div>
     <div class="contacts">
       <div>
-        <span class="label">Contratación</span>
+        <span class="label" data-i18n="booking">Contratación</span>
         <a class="v mail" id="mail" href="mailto:hola@martinlaportilla.com">hola@martinlaportilla.com</a>
-        <button class="copy" type="button" id="copy-mail">Copiar email</button>
+        <button class="copy" type="button" id="copy-mail" data-i18n="copy">Copiar email</button>
       </div>
       <div>
-        <span class="label">Redes</span>
+        <span class="label" data-i18n="social">Redes</span>
         <a class="v ig" href="https://www.instagram.com/martinlaportilla/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><defs><radialGradient id="igg" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#igg)"/><g fill="none" stroke="#fff" stroke-width="1.7"><rect x="5" y="5" width="14" height="14" rx="4"/><circle cx="12" cy="12" r="3.3"/></g><circle cx="16.2" cy="7.8" r=".95" fill="#fff"/></svg>@martinlaportilla</a>
       </div>
     </div>
@@ -286,18 +292,42 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 
 <script>
 (function(){
-  var MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  var DICT = {"es": {"nav_proj": "Proyectos", "nav_live": "Directos", "nav_music": "Música", "nav_video": "Vídeos", "nav_gear": "Equipo", "nav_contact": "Contacto", "bassist": "Bajista", "tagline": "Bajo eléctrico para directo, estudio y producciones a distancia.", "booking": "Contratación", "about": "Sobre mí", "portrait": "Retrato vertical", "bio0": "Bajista argentino afincado en Barcelona desde 1999. Su lenguaje une jazz, soul, pop, música brasileña y ritmos latinos, con un sonido marcado por la riqueza rítmica, la precisión y la sensibilidad.", "bio1": "Ha tocado con artistas como Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío y Nella Rojas, y ha grabado junto a Paquito D'Rivera, Bobby Shew, Luis Salinas y Perico Sambeat, entre otros.", "bio2": "En la escena española ha compartido escenario con Rita Payés, Lucía Fumero, Juan Gómez «Chicuelo», Llibert Fortuny, Albert Bover y Raynald Colom. Hoy forma parte de varios proyectos en Barcelona, con los que actúa en festivales y clubes de todo el mundo.", "bio3": "Es artista D'Addario.", "bands": "Bandas y artistas", "upcoming": "Próximas fechas", "nodates": "No hay fechas anunciadas ahora mismo. Para contratación, escríbeme.", "latest": "Último lanzamiento", "moreig": "Ver más en Instagram ↗", "bass": "Bajo", "bass5": "Bajo 5 cuerdas", "strings": "Cuerdas", "official": "Artista oficial", "iplay": "Toco con cuerdas D'Addario XS, calibre .045.", "press": "Contratación y prensa", "copy": "Copiar email", "social": "Redes", "copied": "Copiado", "with": "con", "tickets": "Entradas", "months": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]}, "en": {"nav_proj": "Projects", "nav_live": "Live", "nav_music": "Music", "nav_video": "Videos", "nav_gear": "Gear", "nav_contact": "Contact", "bassist": "Bassist", "tagline": "Electric bass for live shows, studio sessions and remote recording.", "booking": "Booking", "about": "About", "portrait": "Portrait", "bio0": "Argentine bassist based in Barcelona since 1999. His playing blends jazz, soul, pop, Brazilian music and Latin rhythms, with a sound defined by rhythmic depth, precision and sensitivity.", "bio1": "He has played with artists such as Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío and Nella Rojas, and has recorded with Paquito D'Rivera, Bobby Shew, Luis Salinas and Perico Sambeat, among others.", "bio2": "On the Spanish scene he has shared the stage with Rita Payés, Lucía Fumero, Juan Gómez “Chicuelo”, Llibert Fortuny, Albert Bover and Raynald Colom. Today he is part of several Barcelona-based projects that take him to festivals and clubs around the world.", "bio3": "He is a D'Addario artist.", "bands": "Bands & artists", "upcoming": "Upcoming dates", "nodates": "No dates announced right now. For bookings, get in touch.", "latest": "Latest release", "moreig": "See more on Instagram ↗", "bass": "Bass", "bass5": "5-string bass", "strings": "Strings", "official": "Official artist", "iplay": "I play D'Addario XS strings, gauge .045.", "press": "Booking & press", "copy": "Copy email", "social": "Social", "copied": "Copied", "with": "with", "tickets": "Tickets", "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]}, "ca": {"nav_proj": "Projectes", "nav_live": "Directes", "nav_music": "Música", "nav_video": "Vídeos", "nav_gear": "Equip", "nav_contact": "Contacte", "bassist": "Baixista", "tagline": "Baix elèctric per a directes, estudi i produccions a distància.", "booking": "Contractació", "about": "Sobre mi", "portrait": "Retrat vertical", "bio0": "Baixista argentí establert a Barcelona des del 1999. El seu llenguatge uneix jazz, soul, pop, música brasilera i ritmes llatins, amb un so marcat per la riquesa rítmica, la precisió i la sensibilitat.", "bio1": "Ha tocat amb artistes com Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío i Nella Rojas, i ha enregistrat amb Paquito D'Rivera, Bobby Shew, Luis Salinas i Perico Sambeat, entre d'altres.", "bio2": "A l'escena espanyola ha compartit escenari amb Rita Payés, Lucía Fumero, Juan Gómez «Chicuelo», Llibert Fortuny, Albert Bover i Raynald Colom. Avui forma part de diversos projectes a Barcelona, amb els quals actua en festivals i clubs d'arreu del món.", "bio3": "És artista D'Addario.", "bands": "Bandes i artistes", "upcoming": "Properes dates", "nodates": "Ara mateix no hi ha dates anunciades. Per a contractació, escriu-me.", "latest": "Últim llançament", "moreig": "Més a Instagram ↗", "bass": "Baix", "bass5": "Baix de 5 cordes", "strings": "Cordes", "official": "Artista oficial", "iplay": "Toco amb cordes D'Addario XS, calibre .045.", "press": "Contractació i premsa", "copy": "Copia l'email", "social": "Xarxes", "copied": "Copiat", "with": "amb", "tickets": "Entrades", "months": ["Gen", "Feb", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Oct", "Nov", "Des"]}, "pt": {"nav_proj": "Projetos", "nav_live": "Shows", "nav_music": "Música", "nav_video": "Vídeos", "nav_gear": "Equipamento", "nav_contact": "Contato", "bassist": "Baixista", "tagline": "Baixo elétrico para shows, estúdio e gravações a distância.", "booking": "Contratação", "about": "Sobre mim", "portrait": "Retrato vertical", "bio0": "Baixista argentino radicado em Barcelona desde 1999. Sua linguagem une jazz, soul, pop, música brasileira e ritmos latinos, com um som marcado pela riqueza rítmica, pela precisão e pela sensibilidade.", "bio1": "Tocou com artistas como Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío e Nella Rojas, e gravou com Paquito D'Rivera, Bobby Shew, Luis Salinas e Perico Sambeat, entre outros.", "bio2": "Na cena espanhola, dividiu o palco com Rita Payés, Lucía Fumero, Juan Gómez “Chicuelo”, Llibert Fortuny, Albert Bover e Raynald Colom. Hoje integra vários projetos em Barcelona, com os quais se apresenta em festivais e clubes do mundo todo.", "bio3": "É artista D'Addario.", "bands": "Bandas e artistas", "upcoming": "Próximas datas", "nodates": "Não há datas anunciadas no momento. Para contratação, entre em contato.", "latest": "Último lançamento", "moreig": "Veja mais no Instagram ↗", "bass": "Baixo", "bass5": "Baixo de 5 cordas", "strings": "Cordas", "official": "Artista oficial", "iplay": "Toco com cordas D'Addario XS, calibre .045.", "press": "Contratação e imprensa", "copy": "Copiar e-mail", "social": "Redes", "copied": "Copiado", "with": "com", "tickets": "Ingressos", "months": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]}};
+  var LANGS = ['es','en','ca','pt'];
+  function pick(){
+    try { var saved = localStorage.getItem('lang'); if (LANGS.indexOf(saved) >= 0) return saved; } catch(e) {}
+    var prefs = navigator.languages || [navigator.language || 'es'];
+    for (var i = 0; i < prefs.length; i++) { var c = String(prefs[i]).slice(0,2).toLowerCase(); if (LANGS.indexOf(c) >= 0) return c; }
+    return 'en';
+  }
+  window.i18n = { lang: pick(), t: function(k){ return (DICT[window.i18n.lang] || DICT.es)[k]; } };
+  function apply(){
+    var l = window.i18n.lang;
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ var v = DICT[l][el.dataset.i18n]; if (v) el.textContent = v; });
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang === l ? 'true' : 'false'); });
+    document.dispatchEvent(new Event('langchange'));
+  }
+  window.i18n.set = function(l){ window.i18n.lang = l; try { localStorage.setItem('lang', l); } catch(e) {} apply(); };
+  document.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click', function(){ window.i18n.set(b.dataset.lang); }); });
+  apply();
+})();
+</script>
+<script>
+(function(){
+  var t = function(k){ return window.i18n ? window.i18n.t(k) : ''; }, last = [];
   var list = document.getElementById('shows'), empty = document.getElementById('shows-empty');
   function esc(s){ return String(s || '').replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   function render(data){
+    last = data || [];
     var hoy = new Date(); hoy.setHours(0,0,0,0);
     var proximos = (data || []).filter(function(c){ var d = new Date(c.fecha + 'T00:00:00'); return !isNaN(d) && d >= hoy; })
       .sort(function(a,b){ return a.fecha < b.fecha ? -1 : 1; });
     list.innerHTML = proximos.map(function(c){
       var p = c.fecha.split('-');
-      var detalle = [c.ciudad, c.con ? 'con ' + c.con : ''].filter(Boolean).map(esc).join(' · ');
-      var boton = c.entradas ? '<a class="btn small" href="' + esc(c.entradas) + '" target="_blank" rel="noopener">Entradas</a>' : '';
-      return '<li><div class="date"><b>' + p[2] + '</b><span class="label">' + MESES[+p[1] - 1] + ' ' + p[0] + '</span></div>' +
+      var detalle = [c.ciudad, c.con ? t('with') + ' ' + c.con : ''].filter(Boolean).map(esc).join(' · ');
+      var boton = c.entradas ? '<a class="btn small" href="' + esc(c.entradas) + '" target="_blank" rel="noopener">' + t('tickets') + '</a>' : '';
+      return '<li><div class="date"><b>' + p[2] + '</b><span class="label">' + t('months')[+p[1] - 1] + ' ' + p[0] + '</span></div>' +
         '<div class="where"><h3>' + esc(c.lugar) + '</h3><div>' + detalle + '</div></div>' + boton + '</li>';
     }).join('');
     empty.hidden = proximos.length > 0;
@@ -305,6 +335,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   var inline = [];
   try { inline = JSON.parse(document.getElementById('shows-data').textContent); } catch(e) {}
   render(inline);
+  document.addEventListener('langchange', function(){ render(last); });
   // Enlace CSV publicado de Google Sheets (Archivo > Compartir > Publicar en la Web > .csv)
   var SHEET_CSV = '';
   function parseCSV(t){
@@ -351,7 +382,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 (function(){
   var btn = document.getElementById('copy-mail'), el = document.getElementById('mail');
   btn.addEventListener('click', function(){
-    var done = function(){ btn.textContent = 'Copiado'; setTimeout(function(){ btn.textContent = 'Copiar email'; }, 1600); };
+    var done = function(){ btn.textContent = window.i18n.t('copied'); setTimeout(function(){ btn.textContent = window.i18n.t('copy'); }, 1600); };
     var fallback = function(){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
     try { navigator.clipboard.writeText(el.textContent.trim()).then(done, fallback); } catch(e){ fallback(); }
   });
