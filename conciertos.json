@@ -1,23 +1,10 @@
 [
-  {
-    "fecha": "2026-10-24",
-    "lugar": "Nombre de la sala",
-    "ciudad": "Ciudad",
-    "con": "Banda o artista",
-    "entradas": ""
-  },
-  {
-    "fecha": "2026-11-07",
-    "lugar": "Nombre de la sala",
-    "ciudad": "Ciudad",
-    "con": "Banda o artista",
-    "entradas": ""
-  },
-  {
-    "fecha": "2026-11-21",
-    "lugar": "Nombre del festival",
-    "ciudad": "Ciudad",
-    "con": "Banda o artista",
-    "entradas": ""
-  }
+  { "fecha": "2026-10-29", "lugar": "23 Robadors", "ciudad": "Barcelona", "con": "Portrait of Jaco", "entradas": "" },
+  { "fecha": "2026-10-30", "lugar": "Club del Disco", "ciudad": "", "con": "Cirilo Fernández", "entradas": "" },
+  { "fecha": "2026-11-06", "lugar": "Cafè del Teatre de l'Escorxador", "ciudad": "Lleida", "con": "Cirilo Fernández", "entradas": "" },
+  { "fecha": "2026-11-08", "lugar": "Carolina Merlo", "ciudad": "", "con": "", "entradas": "" },
+  { "fecha": "2026-11-11", "lugar": "Café Berlín", "ciudad": "Madrid", "con": "Cirilo Fernández", "entradas": "" },
+  { "fecha": "2026-11-12", "lugar": "Club del Disco", "ciudad": "", "con": "Cirilo Fernández", "entradas": "" },
+  { "fecha": "2026-12-10", "lugar": "23 Robadors", "ciudad": "Barcelona", "con": "Guillermo Calliero", "entradas": "" },
+  { "fecha": "2026-12-26", "lugar": "Sunset Jazz Club", "ciudad": "Girona", "con": "Portrait of Jaco", "entradas": "" }
 ]
