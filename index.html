@@ -91,6 +91,13 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 .gear div{display:flex;justify-content:space-between;gap:1rem;padding-block:1.1rem;border-bottom:1px solid var(--line)}
 .gear dd{margin:0;text-align:right}
 
+/* endorsements */
+.endorse .wrap{display:grid;justify-items:center;text-align:center;gap:1.75rem}
+.endorse-logo{display:block;width:min(18rem,70%);transition:opacity .2s}
+.endorse-logo:hover{opacity:.8}
+.endorse-logo img{display:block;width:100%;height:auto}
+.endorse p{margin:0;color:var(--muted)}
+
 /* contacto */
 .contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 3rem}
 .contacts div{display:grid;gap:.6rem;align-content:start;min-width:0}
@@ -145,7 +152,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
     <div class="bio">
       <div class="portrait"><span class="label">Retrato vertical</span></div>
       <div>
-        <p class="lead">Bajista profesional con experiencia en escenario y estudio.</p>
+        <p class="lead">Bajista profesional con experiencia en escenario y estudio. Artista D'Addario.</p>
         <p>Trabajo con bandas, artistas y productores, adaptando el sonido y la interpretación a lo que necesita cada proyecto.</p>
         <p>Aquí irá tu bio real: tu formación, con quién has tocado, los estilos en los que te mueves y desde dónde trabajas.</p>
       </div>
@@ -203,9 +210,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
       <div><dt class="label">Bajo secundario</dt><dd>Marca y modelo</dd></div>
       <div><dt class="label">Preamp</dt><dd>Darkglass Anagram</dd></div>
       <div><dt class="label">Amplificación</dt><dd>Marca y modelo</dd></div>
-      <div><dt class="label">Cuerdas</dt><dd>Marca y calibre</dd></div>
+      <div><dt class="label">Cuerdas</dt><dd>D'Addario XS · .045</dd></div>
       <div><dt class="label">Control</dt><dd>iPad con MIDI</dd></div>
     </dl>
+  </div>
+</section>
+
+<section id="endorsements" class="endorse">
+  <div class="wrap">
+    <span class="label">Artista oficial</span>
+    <a class="endorse-logo" href="https://www.daddario.com/" target="_blank" rel="noopener"><img src="img/daddario.png" alt="D'Addario" width="640" height="117"></a>
+    <p>Toco con cuerdas D'Addario XS, calibre .045.</p>
   </div>
 </section>
 
