@@ -88,7 +88,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 .btn{display:inline-block;font:500 .75rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:1rem 1.5rem;border:1px solid var(--fg);transition:background .2s,color .2s}
 .btn:hover{background:var(--fg);color:var(--bg)}
 .btn.small{padding:.75rem 1.1rem;font-size:.68rem}
-.coffee{justify-self:start}
+.coffee{justify-self:start;display:inline-flex;align-items:center;gap:.7rem;padding:.95rem 1.4rem;background:var(--accent);border-color:var(--accent);color:#fff;transition:background .2s,border-color .2s,transform .2s}.coffee svg{width:1.45rem;height:1.45rem;flex:none}.coffee:hover{background:var(--fg);border-color:var(--fg);color:var(--bg);transform:translateY(-2px)}.coffee .steam{animation:steam 2.4s ease-in-out infinite}@keyframes steam{0%,100%{opacity:.35;transform:translateY(0)}50%{opacity:1;transform:translateY(-1px)}}@media (prefers-reduced-motion:reduce){.coffee .steam{animation:none}}
 .social{display:flex;gap:1.5rem;flex-wrap:wrap}
 .social a{font:500 .7rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .social a:hover{color:var(--fg)}
@@ -472,7 +472,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
       </div>
       <div>
         <span class="label" data-i18n="support">Apoya mi música</span>
-        <a class="btn small coffee" href="https://ko-fi.com/martinlaportilla" target="_blank" rel="noopener"><span aria-hidden="true">☕</span> <span data-i18n="coffee">Invítame a un café</span></a>
+        <a class="btn coffee" href="https://ko-fi.com/martinlaportilla" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path class="steam" d="M7 2.5c-.8.9-.8 1.9 0 2.8M11 2.5c-.8.9-.8 1.9 0 2.8M15 2.5c-.8.9-.8 1.9 0 2.8"/><path d="M3.5 8.5h14v5.5a5.5 5.5 0 0 1-5.5 5.5H9a5.5 5.5 0 0 1-5.5-5.5V8.5z"/><path d="M17.5 10h1.3a2.7 2.7 0 0 1 0 5.4h-1.6"/><path d="M3 21.5h15"/></svg><span data-i18n="coffee">Invítame a un café</span></a>
       </div>
     </div>
   </div>
