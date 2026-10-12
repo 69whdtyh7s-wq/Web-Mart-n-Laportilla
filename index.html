@@ -132,6 +132,7 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 .date b{font:400 2.4rem/1 var(--serif);font-variant-numeric:lining-nums tabular-nums}
 .date span{margin-top:.35rem}
 .shows .where{min-width:0}
+.shows li.yr{display:block;padding-block:2rem .7rem}.shows li.yr:first-child{padding-top:0}.shows:has(> .yr:first-child){border-top:0}.shows li.yr span{font:400 clamp(1.4rem,3vw,1.75rem)/1 var(--serif);color:var(--accent)}
 @media (min-width:721px){.shows li{grid-template-columns:6.5rem minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) 6.5rem}.shows .venue{grid-column:3;text-align:center}.shows .city{grid-column:4 / 6;text-align:right}.shows li:has(> .btn) .city{grid-column:4}.shows li > .btn{grid-column:5}.shows li > .nob{display:none}}
 
 .note{margin-top:1rem;color:var(--muted);font-size:.85rem}
@@ -555,13 +556,15 @@ window.IG = {
     var hoy = new Date(); hoy.setHours(0,0,0,0);
     var proximos = (data || []).filter(function(c){ var d = new Date(c.fecha + 'T00:00:00'); return !isNaN(d) && d >= hoy; })
       .sort(function(a,b){ return a.fecha < b.fecha ? -1 : 1; });
+    var yPrev = '';
     list.innerHTML = proximos.map(function(c){
       var p = c.fecha.split('-');
+      var yRow = p[0] !== yPrev ? '<li class="yr"><span>' + p[0] + '</span></li>' : ''; yPrev = p[0];
       var artista = c.con || c.lugar;
       var ig = window.IG && window.IG[artista];
       var sala = c.con ? c.lugar : '';
       var boton = c.entradas ? '<a class="btn small" href="' + esc(c.entradas) + '" target="_blank" rel="noopener">' + t('tickets') + '</a>' : '';
-      return '<li><div class="date"><b>' + p[2] + '</b><span class="label">' + t('months')[+p[1] - 1] + ' ' + p[0] + '</span></div>' +
+      return yRow + '<li><div class="date"><b>' + p[2] + '</b><span class="label">' + t('months')[+p[1] - 1] + '</span></div>' +
         '<div class="where"><h3>' + (ig ? '<a class="artist" href="' + esc(ig) + '" target="_blank" rel="noopener">' + esc(artista) + '</a>' : esc(artista)) + '</h3></div><div class="venue">' + esc(sala) + '</div><div class="city">' + esc(c.ciudad) + '</div>' + (boton || '<span class="nob"></span>') + '</li>';
     }).join('');
     empty.hidden = proximos.length > 0;
