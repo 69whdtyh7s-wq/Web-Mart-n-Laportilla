@@ -175,11 +175,13 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 @media (max-width:720px){.tracks{grid-template-columns:1fr}}
 
 /* fotos */
-.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.gallery .feat{grid-column:1 / -1}
+.gallery .feat img{aspect-ratio:16/9}
 .gallery .ph{display:block;overflow:hidden;background:var(--raise)}
 .gallery img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;transition:transform .5s ease}
 .gallery .ph:hover img{transform:scale(1.03)}
-@media (max-width:720px){.gallery{gap:.5rem}}
+@media (max-width:720px){.gallery{gap:.5rem;grid-template-columns:repeat(2,minmax(0,1fr))}}
 .lb{position:fixed;inset:0;z-index:50;background:rgba(20,17,13,.95);display:flex;align-items:center;justify-content:center;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
 .lb[hidden]{display:none}
 .lb img{max-width:min(92vw,1600px);max-height:86vh;width:auto;height:auto;box-shadow:0 10px 40px rgba(0,0,0,.4)}
@@ -395,7 +397,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   <div class="wrap">
     <div class="sh"><h2 data-i18n="nav_photos">Fotos</h2></div>
     <div class="gallery">
-      <a class="ph" href="img/galeria/foto-saulo.jpg" data-i="0"><img src="img/galeria/foto-saulo-mini.jpg" alt="Martín Laportilla en directo con Saulo Fernandes junto al mar" width="900" height="600" loading="lazy"></a>
+      <a class="ph feat" href="img/galeria/foto-saulo.jpg" data-i="0"><img src="img/galeria/foto-saulo-wide.jpg" alt="Martín Laportilla en directo con Saulo Fernandes junto al mar" width="1600" height="900" loading="lazy"></a>
       <a class="ph" href="img/galeria/foto-aylin.jpg" data-i="1"><img src="img/galeria/foto-aylin-mini.jpg" alt="Martín Laportilla en el escenario con Aylin" width="900" height="600" loading="lazy"></a>
       <a class="ph" href="img/galeria/foto-quintero.jpg" data-i="2"><img src="img/galeria/foto-quintero-mini.jpg" alt="Martín Laportilla con Quintero" width="900" height="600" loading="lazy"></a>
       <a class="ph" href="img/galeria/foto-1.jpg" data-i="3"><img src="img/galeria/foto-1-mini.jpg" alt="Martín Laportilla en concierto con un Fender Jazz Bass" width="900" height="600" loading="lazy"></a>
