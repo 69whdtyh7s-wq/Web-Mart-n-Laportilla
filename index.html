@@ -133,7 +133,7 @@ h3{margin:0;font:400 1.4rem/1.2 var(--serif)}
 .date span{margin-top:.35rem}
 .shows .where{min-width:0}
 .shows li.yr{display:block;padding-block:2rem .7rem}.shows li.yr:first-child{padding-top:0}.shows:has(> .yr:first-child){border-top:0}.shows li.yr span{font:400 clamp(1.4rem,3vw,1.75rem)/1 var(--serif);color:var(--accent)}
-@media (min-width:721px){.shows li{grid-template-columns:6.5rem minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) 6.5rem}.shows .venue{grid-column:3;text-align:left}.shows .city{grid-column:4 / 6;text-align:left}.shows li:has(> .btn) .city{grid-column:4}.shows li > .btn{grid-column:5}.shows li > .nob{display:none}}
+@media (min-width:721px){.shows{display:grid;grid-template-columns:4rem repeat(3,max-content);column-gap:clamp(2rem,5vw,4.5rem);width:max-content;max-width:100%;margin-inline:auto}.shows li{grid-column:1 / -1;grid-template-columns:subgrid;column-gap:clamp(2rem,5vw,4.5rem);row-gap:0}.shows li.yr{display:block}.shows.has-btn{grid-template-columns:4rem repeat(4,max-content)}.shows .venue,.shows .city{text-align:left}.shows .city{grid-column:auto}.shows li > .btn{grid-column:auto}.shows li > .nob{display:none}}
 
 .note{margin-top:1rem;color:var(--muted);font-size:.85rem}
 
@@ -568,6 +568,7 @@ window.IG = {
         '<div class="where"><h3>' + (ig ? '<a class="artist" href="' + esc(ig) + '" target="_blank" rel="noopener">' + esc(artista) + '</a>' : esc(artista)) + '</h3></div><div class="venue">' + esc(sala) + '</div><div class="city">' + esc(c.ciudad) + '</div>' + (boton || '<span class="nob"></span>') + '</li>';
     }).join('');
     empty.hidden = proximos.length > 0;
+    list.classList.toggle('has-btn', proximos.some(function(c){ return !!c.entradas; }));
   }
   var inline = [];
   try { inline = JSON.parse(document.getElementById('shows-data').textContent); } catch(e) {}
