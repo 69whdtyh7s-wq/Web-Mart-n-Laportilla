@@ -271,6 +271,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 #musica .sub{display:flex;align-items:center;gap:1rem;font:400 clamp(1.35rem,3vw,1.7rem)/1.1 var(--serif);margin:0 0 1.1rem}#musica .sub::after{content:"";flex:1;height:1px;background:var(--line)}#musica .sub-v{margin-top:clamp(2.5rem,6vw,3.75rem)}
+@media (min-width:721px){.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:3rem;border-top:0}.projects li{grid-template-columns:1fr;gap:.2rem;align-content:start;padding-block:1rem;border-top:1px solid var(--line);border-bottom:0}.projects li:nth-last-child(-n+2){border-bottom:1px solid var(--line)}.projects h3{font-size:1.4rem}.projects .label{text-align:left;max-width:none;line-height:1.5}.shows li{padding-block:.85rem}.shows .date b{font-size:1.85rem}.shows li.yr{padding-block:.4rem .6rem}}
 </style>
 </head>
 <body>
@@ -303,7 +304,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
 <div class="hero">
   <img src="img/portada-hd.jpg" alt="Martín Laportilla grabando el bajo en estudio" width="2000" height="1126">
   <div class="wrap hero-text">
-    <span class="label" data-i18n="bassist">Bajista</span>
     <h1>Martín <em>Laportilla</em></h1>
     <p data-i18n="tagline">Bajo eléctrico para directo, estudio y producciones a distancia.</p>
     <a class="btn" href="#contacto" data-i18n="nav_contact">Contacto</a>
@@ -403,12 +403,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
     </div>
     <h3 class="sub sub-v"><span data-i18n="mus_videos">Vídeos</span></h3>
     <div class="videos">
-      <a class="video" href="https://www.youtube.com/watch?v=_Y9FP8bPt90" target="_blank" rel="noopener" data-yt="_Y9FP8bPt90"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/_Y9FP8bPt90/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Guillermo Calliero · Milonjazz con Paquito D'Rivera</h3><span class="label">YouTube</span></a>
-      <a class="video" href="https://www.youtube.com/watch?v=rFVY3guretA" target="_blank" rel="noopener" data-yt="rFVY3guretA"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/rFVY3guretA/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Saulo · Não Precisa Mudar</h3><span class="label">YouTube</span></a>
-      <a class="video" href="https://www.youtube.com/watch?v=5zkQnwMKlJU" target="_blank" rel="noopener" data-yt="5zkQnwMKlJU"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/5zkQnwMKlJU/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Portrait of Jaco</h3><span class="label">YouTube</span></a>
-      <a class="video" href="https://www.youtube.com/watch?v=1S-htzWe93Q" target="_blank" rel="noopener" data-yt="1S-htzWe93Q"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/1S-htzWe93Q/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>X Levy · Milagre dos Peixes (Barcelona Sessions)</h3><span class="label">YouTube</span></a>
-      <a class="video" href="https://www.youtube.com/watch?v=KHNFGHWi_EM" target="_blank" rel="noopener" data-yt="KHNFGHWi_EM"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/KHNFGHWi_EM/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Rita Payés &amp; Lucía Fumero Quartet</h3><span class="label">YouTube</span></a>
-      <a class="video" href="https://www.youtube.com/watch?v=TAQ3O7q9OPE" target="_blank" rel="noopener" data-yt="TAQ3O7q9OPE"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/TAQ3O7q9OPE/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Manu Contrera · Buenos días</h3><span class="label">YouTube</span></a>
+      <a class="video" href="https://www.youtube.com/watch?v=_Y9FP8bPt90" target="_blank" rel="noopener" data-yt="_Y9FP8bPt90"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/_Y9FP8bPt90/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Guillermo Calliero · Milonjazz con Paquito D'Rivera</h3></a>
+      <a class="video" href="https://www.youtube.com/watch?v=rFVY3guretA" target="_blank" rel="noopener" data-yt="rFVY3guretA"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/rFVY3guretA/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Saulo · Não Precisa Mudar</h3></a>
+      <a class="video" href="https://www.youtube.com/watch?v=5zkQnwMKlJU" target="_blank" rel="noopener" data-yt="5zkQnwMKlJU"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/5zkQnwMKlJU/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Portrait of Jaco</h3></a>
+      <a class="video" href="https://www.youtube.com/watch?v=1S-htzWe93Q" target="_blank" rel="noopener" data-yt="1S-htzWe93Q"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/1S-htzWe93Q/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>X Levy · Milagre dos Peixes (Barcelona Sessions)</h3></a>
+      <a class="video" href="https://www.youtube.com/watch?v=KHNFGHWi_EM" target="_blank" rel="noopener" data-yt="KHNFGHWi_EM"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/KHNFGHWi_EM/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Rita Payés &amp; Lucía Fumero Quartet</h3></a>
+      <a class="video" href="https://www.youtube.com/watch?v=TAQ3O7q9OPE" target="_blank" rel="noopener" data-yt="TAQ3O7q9OPE"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/TAQ3O7q9OPE/hqdefault.jpg'),linear-gradient(135deg,#d9cfbd,#c9bca6);background-size:cover;background-position:center"><i aria-hidden="true">▶</i></div><h3>Manu Contrera · Buenos días</h3></a>
     </div>
   </div>
 </section>
@@ -495,7 +495,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
       <div>
         <span class="label" data-i18n="support">Apoya mi música</span>
         <a class="v coffee" href="https://ko-fi.com/martinlaportilla" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.5c-.7.8-.7 1.7 0 2.5M12 2.5c-.7.8-.7 1.7 0 2.5"/><path d="M4 8h12.5v5.5A5.5 5.5 0 0 1 11 19H9.5A5.5 5.5 0 0 1 4 13.5V8z"/><path d="M16.5 9.5h1.2a2.6 2.6 0 0 1 0 5.2h-1.4"/><path d="M3.5 21.5h14"/></svg><span data-i18n="coffee">Invítame a un café</span></a>
-        <p class="coffee-note" data-i18n="coffee_note">Si mi música o mis vídeos te acompañan, puedes apoyarlos en Ko-fi.</p>
       </div>
     </div>
   </div>
