@@ -611,14 +611,14 @@ window.IG = {
       .filter(function(c){ return c.fecha; });
   }
   if (location.protocol.indexOf('http') === 0) {
-    var json = function(){ return fetch('conciertos.json', {cache: 'no-store'}).then(function(r){ return r.ok ? r.json() : Promise.reject(); }); };
+    var json = function(){ return fetch('editar/conciertos.json', {cache: 'no-store'}).then(function(r){ return r.ok ? r.json() : Promise.reject(); }); };
     // hoja.txt contiene el enlace CSV de Google Sheets; si está vacío se usa conciertos.json
-    fetch('hoja.txt', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : ''; }).catch(function(){ return ''; })
+    fetch('editar/hoja.txt', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : ''; }).catch(function(){ return ''; })
       .then(function(t){
         var url = (SHEET_CSV || (t.match(/https:\/\/docs\.google\.com\/\S+/) || [''])[0]).trim();
         if (url) return fetch(url, {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); }).then(fromSheet);
         // conciertos.csv exportado de Numbers o Excel; si no existe, conciertos.json
-        return fetch('conciertos.csv', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); }).then(fromSheet).catch(json);
+        return fetch('editar/conciertos.csv', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); }).then(fromSheet).catch(json);
       })
       .then(render).catch(function(){});
   }
@@ -746,7 +746,7 @@ window.IG = {
       return '<li><div><h3>' + name + '</h3><p>' + esc(est) + '</p></div><span class="label">' + esc(gira) + '</span></li>';
     }).join('');
   }
-  fetch('proyectos.csv', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); })
+  fetch('editar/proyectos.csv', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); })
     .then(function(t){
       data = parse(t);
       data.forEach(function(p){ if (p.instagram && window.IG) window.IG[p.nombre] = p.instagram; });
@@ -786,7 +786,7 @@ window.IG = {
   function apEmbed(u){ u = String(u).trim(); return u ? u.replace(/^https?:\/\/(embed\.)?music\.apple\.com\//, 'https://embed.music.apple.com/') : ''; }
 
   // Vídeos
-  load('videos.csv', function(d){
+  load('editar/videos.csv', function(d){
     var box = document.querySelector('#musica .videos'); if (!box) return;
     var items = d.map(function(v){ return {id: ytId(v.youtube), t: v.titulo}; }).filter(function(v){ return v.id; });
     var now = Array.prototype.map.call(box.querySelectorAll('.video'), function(a){ return a.dataset.yt + '|' + a.querySelector('h3').textContent; }).join('\n');
@@ -797,7 +797,7 @@ window.IG = {
   });
 
   // Música (Spotify y Apple Music)
-  load('musica.csv', function(d){
+  load('editar/musica.csv', function(d){
     var box = document.querySelector('#musica .tracks'); if (!box) return;
     var items = d.map(function(m){ return {t: m.titulo, sp: spId(m.spotify), ap: apEmbed(m.apple)}; }).filter(function(m){ return m.sp || m.ap; });
     var now = Array.prototype.map.call(box.querySelectorAll('.track'), function(tr){
@@ -815,7 +815,7 @@ window.IG = {
   });
 
   // Galería (la primera foto es la destacada, a todo el ancho)
-  load('galeria.csv', function(d){
+  load('editar/galeria.csv', function(d){
     var box = document.querySelector('.gallery'); if (!box) return;
     var items = d.filter(function(g){ return g.foto; });
     var now = Array.prototype.map.call(box.querySelectorAll('.ph'), function(a){ var im = a.querySelector('img'); return a.getAttribute('href') + '|' + im.getAttribute('src') + '|' + im.alt; }).join('\n');
@@ -828,7 +828,7 @@ window.IG = {
   });
 
   // Equipo
-  load('equipo.csv', function(d){
+  load('editar/equipo.csv', function(d){
     var cols = document.querySelectorAll('#equipo .gear-col dl'); if (cols.length < 2) return;
     var data = d.filter(function(g){ return g.modelo; });
     function render(){
@@ -871,7 +871,7 @@ window.IG = {
     if (!ps || !ps.length) return;
     box.innerHTML = ps.map(function(p, i){ return '<p' + (i === 0 ? ' class="lead"' : '') + '>' + esc(p) + '</p>'; }).join('');
   }
-  fetch('bio.txt', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); })
+  fetch('editar/bio.txt', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); })
     .then(function(t){ bio = parse(t); render(); }).catch(function(){});
   document.addEventListener('langchange', render);
 })();
