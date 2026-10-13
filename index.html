@@ -846,5 +846,35 @@ window.IG = {
   });
 })();
 </script>
+<script>
+// Biografía: se carga de bio.txt (un bloque por idioma: [es], [en], [ca], [pt]; párrafos separados por una línea en blanco)
+(function(){
+  var box = document.querySelector('#bio .bio > div');
+  if (!box || location.protocol.indexOf('http') !== 0) return;
+  var bio = null;
+  function esc(v){ return String(v).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function parse(t){
+    var out = {}, lang = null, buf = [];
+    function flush(){ if (lang) out[lang] = buf.join('\n').split(/\n\s*\n/).map(function(p){ return p.replace(/\s*\n\s*/g, ' ').trim(); }).filter(Boolean); buf = []; }
+    t.replace(/^﻿/, '').split(/\r?\n/).forEach(function(line){
+      var m = line.match(/^\s*\[([a-z]{2})\]\s*$/i);
+      if (m) { flush(); lang = m[1].toLowerCase(); return; }
+      if (/^\s*#/.test(line)) return;
+      buf.push(line);
+    });
+    flush();
+    return out;
+  }
+  function render(){
+    if (!bio) return;
+    var l = (window.i18n && window.i18n.lang) || 'es', ps = bio[l] || bio.es;
+    if (!ps || !ps.length) return;
+    box.innerHTML = ps.map(function(p, i){ return '<p' + (i === 0 ? ' class="lead"' : '') + '>' + esc(p) + '</p>'; }).join('');
+  }
+  fetch('bio.txt', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); })
+    .then(function(t){ bio = parse(t); render(); }).catch(function(){});
+  document.addEventListener('langchange', render);
+})();
+</script>
 </body>
 </html>

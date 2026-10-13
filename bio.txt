@@ -1,0 +1,48 @@
+# Biografía de la web.
+# Cada idioma empieza con su etiqueta entre corchetes: [es], [en], [ca], [pt].
+# Deja una línea en blanco entre párrafos. El primer párrafo es el texto grande de la izquierda.
+# Las líneas que empiezan por # no se muestran.
+
+[es]
+Bajista argentino afincado en España desde 1999. Su lenguaje une jazz, soul, pop, música brasileña y ritmos latinos, con un sonido marcado por la riqueza rítmica, la precisión y la sensibilidad.
+
+Ha tocado con artistas como Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío y Nella Rojas, y ha grabado junto a Paquito D'Rivera, Bobby Shew, Luis Salinas y Perico Sambeat, entre otros.
+
+En la escena española ha compartido escenario con Rita Payés, Marco Mezquida, Juan Gómez «Chicuelo», José Reinoso, Albert Bover, Ernesto Aurignac y Raynald Colom, por mencionar solo algunos. Hoy forma parte de varios proyectos en Barcelona, con los que actúa en festivales y clubes de todo el mundo.
+
+En 2026 estrenó Portrait of Jaco, su proyecto propio dedicado a la música de Jaco Pastorius, junto a Lluc Casares, Antonio Mazzei, David Xirgu y Juan Berbín.
+
+Es artista oficial de D'Addario, referente mundial en cuerdas.
+
+[en]
+Argentine bassist based in Spain since 1999. His playing blends jazz, soul, pop, Brazilian music and Latin rhythms, with a sound defined by rhythmic depth, precision and sensitivity.
+
+He has played with artists such as Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío and Nella Rojas, and has recorded with Paquito D'Rivera, Bobby Shew, Luis Salinas and Perico Sambeat, among others.
+
+On the Spanish scene he has shared the stage with Rita Payés, Marco Mezquida, Juan Gómez “Chicuelo”, José Reinoso, Albert Bover, Ernesto Aurignac and Raynald Colom, to name just a few. Today he is part of several Barcelona-based projects that take him to festivals and clubs around the world.
+
+In 2026 he launched Portrait of Jaco, his own project devoted to the music of Jaco Pastorius, alongside Lluc Casares, Antonio Mazzei, David Xirgu and Juan Berbín.
+
+He is an official artist of D'Addario, the world's leading string maker.
+
+[ca]
+Baixista argentí establert a Espanya des del 1999. El seu llenguatge uneix jazz, soul, pop, música brasilera i ritmes llatins, amb un so marcat per la riquesa rítmica, la precisió i la sensibilitat.
+
+Ha tocat amb artistes com Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío i Nella Rojas, i ha enregistrat amb Paquito D'Rivera, Bobby Shew, Luis Salinas i Perico Sambeat, entre d'altres.
+
+A l'escena espanyola ha compartit escenari amb Rita Payés, Marco Mezquida, Juan Gómez «Chicuelo», José Reinoso, Albert Bover, Ernesto Aurignac i Raynald Colom, per citar-ne només alguns. Avui forma part de diversos projectes a Barcelona, amb els quals actua en festivals i clubs d'arreu del món.
+
+El 2026 va estrenar Portrait of Jaco, el seu projecte propi dedicat a la música de Jaco Pastorius, al costat de Lluc Casares, Antonio Mazzei, David Xirgu i Juan Berbín.
+
+És artista oficial de D'Addario, referent mundial en cordes.
+
+[pt]
+Baixista argentino radicado na Espanha desde 1999. Sua linguagem une jazz, soul, pop, música brasileira e ritmos latinos, com um som marcado pela riqueza rítmica, pela precisão e pela sensibilidade.
+
+Tocou com artistas como Saulo Fernandes, Margareth Menezes, Paula Lima, Jair Oliveira, Gabriel Grossi, Aca Seca Trío e Nella Rojas, e gravou com Paquito D'Rivera, Bobby Shew, Luis Salinas e Perico Sambeat, entre outros.
+
+Na cena espanhola, dividiu o palco com Rita Payés, Marco Mezquida, Juan Gómez “Chicuelo”, José Reinoso, Albert Bover, Ernesto Aurignac e Raynald Colom, para citar apenas alguns. Hoje integra vários projetos em Barcelona, com os quais se apresenta em festivais e clubes do mundo todo.
+
+Em 2026 estreou Portrait of Jaco, seu projeto próprio dedicado à música de Jaco Pastorius, ao lado de Lluc Casares, Antonio Mazzei, David Xirgu e Juan Berbín.
+
+É artista oficial da D'Addario, referência mundial em cordas.
