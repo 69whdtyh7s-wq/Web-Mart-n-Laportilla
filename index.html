@@ -708,5 +708,49 @@ window.IG = {
 </script>
 
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2aabeab1cc9e4a039cf20d11456ed9bd"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+// Proyectos: se cargan de proyectos.csv (si no existe, se queda la lista escrita en el HTML)
+(function(){
+  var list = document.querySelector('.projects');
+  if (!list || location.protocol.indexOf('http') !== 0) return;
+  var data = null;
+  function esc(v){ return String(v || '').replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function parse(t){
+    t = t.replace(/^﻿/, '');
+    var first = t.split(/\r?\n/)[0], sep = (first.split(';').length > first.split(',').length) ? ';' : ',';
+    var rows = [], row = [], cell = '', q = false;
+    for (var i = 0; i < t.length; i++) {
+      var ch = t[i];
+      if (q) { if (ch === '"' && t[i+1] === '"') { cell += '"'; i++; } else if (ch === '"') q = false; else cell += ch; }
+      else if (ch === '"') q = true;
+      else if (ch === sep) { row.push(cell); cell = ''; }
+      else if (ch === '\n' || ch === '\r') { if (ch === '\r' && t[i+1] === '\n') i++; row.push(cell); rows.push(row); row = []; cell = ''; }
+      else cell += ch;
+    }
+    if (cell || row.length) { row.push(cell); rows.push(row); }
+    var head = (rows.shift() || []).map(function(h){ return h.trim().toLowerCase(); });
+    return rows.map(function(r){ var o = {}; head.forEach(function(h, k){ o[h] = (r[k] || '').trim(); }); return o; })
+      .filter(function(o){ return o.nombre; });
+  }
+  function render(){
+    if (!data) return;
+    var l = (window.i18n && window.i18n.lang) || 'es', Y = new Date().getFullYear();
+    list.innerHTML = data.map(function(p){
+      var est = (l === 'en' && p.estilo_en) || p.estilo;
+      var gira = (p['gira_' + l] || p.gira || '').replace(/\{Y\}/g, Y);
+      var name = esc(p.nombre);
+      if (p.instagram) name = '<a class="artist" href="' + esc(p.instagram) + '" target="_blank" rel="noopener">' + name + '</a>';
+      return '<li><div><h3>' + name + '</h3><p>' + esc(est) + '</p></div><span class="label">' + esc(gira) + '</span></li>';
+    }).join('');
+  }
+  fetch('proyectos.csv', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); })
+    .then(function(t){
+      data = parse(t);
+      data.forEach(function(p){ if (p.instagram && window.IG) window.IG[p.nombre] = p.instagram; });
+      render();
+    }).catch(function(){});
+  document.addEventListener('langchange', render);
+})();
+</script>
 </body>
 </html>
