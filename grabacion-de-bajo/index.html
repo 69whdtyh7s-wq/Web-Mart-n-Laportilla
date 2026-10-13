@@ -432,6 +432,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   }
   document.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click', function(){ try { localStorage.setItem('lang', b.dataset.lang); } catch(e) {} apply(b.dataset.lang); }); });
   apply(pick());
+  // Textos editables en editar/textos-pagina-grabacion.txt
+  function parseTxt(t){ var out = {}, k = null; t.replace(/^﻿/, '').split(/\r?\n/).forEach(function(line){ if (/^\s*#/.test(line)) return; var m = line.match(/^\s*\[([^\]]+)\]\s*$/); if (m) { k = m[1].trim(); out[k] = out[k] || {}; return; } m = line.match(/^\s*(es|en|ca|pt)\s*:\s?(.*)$/i); if (k && m && m[2].trim()) out[k][m[1].toLowerCase()] = m[2].trim(); }); return out; }
+  if (location.protocol.indexOf('http') === 0) fetch('/editar/textos-pagina-grabacion.txt', {cache: 'no-store'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); }).then(function(t){ var x = parseTxt(t); Object.keys(x).forEach(function(k){ Object.keys(x[k]).forEach(function(l){ if (D[l]) D[l][k] = x[k][l]; }); }); apply(document.documentElement.lang || 'es'); }).catch(function(){});
 })();
 </script>
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2aabeab1cc9e4a039cf20d11456ed9bd"}'></script><!-- End Cloudflare Web Analytics -->

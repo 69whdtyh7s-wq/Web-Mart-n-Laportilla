@@ -1,0 +1,271 @@
+# Textos de la página de Grabación (martinlaportilla.com/grabacion-de-bajo/)
+# Cada texto empieza con su nombre entre corchetes y debajo una línea por idioma (es, en, ca, pt).
+# Cambia solo lo que va después de 'es:', 'en:', etc. No cambies los nombres entre corchetes.
+# Si dejas un idioma vacío, se queda el texto que tenía la web.
+
+[g_eyebrow]
+es: Grabación · En estudio y a distancia
+en: Recording · Studio & remote
+ca: Enregistrament · A l'estudi i a distància
+pt: Gravação · Em estúdio e a distância
+
+[g_h1]
+es: Grabación de bajo en estudio y a distancia
+en: Session bass player for remote and studio recording
+ca: Enregistrament de baix a l'estudi i a distància
+pt: Gravação de baixo em estúdio e a distância
+
+[g_lead]
+es: Grabo líneas de bajo para tus canciones, en estudio en Barcelona o a distancia desde mi propio set-up, para producciones de cualquier país. Bajista profesional con 30 años de trayectoria en directo y en estudio y artista D'Addario.
+en: I record bass lines for your songs, in the studio in Barcelona or remotely from my own setup, for productions anywhere in the world. Professional bassist with a 30-year career on stage and in the studio and a D'Addario artist.
+ca: Enregistro línies de baix per a les teves cançons, a l'estudi a Barcelona o a distància des del meu propi set-up, per a produccions de qualsevol país. Baixista professional amb 30 anys de trajectòria en directe i a l'estudi i artista D'Addario.
+pt: Gravo linhas de baixo para as suas músicas, em estúdio em Barcelona ou a distância no meu próprio setup, para produções de qualquer país. Baixista profissional com 30 anos de carreira nos palcos e em estúdio e artista D'Addario.
+
+[per_song]
+es: por canción a distancia
+en: per song, remote
+ca: per cançó a distància
+pt: por música a distância
+
+[g_btn]
+es: Solicitar grabación
+en: Request a recording
+ca: Sol·licitar enregistrament
+pt: Solicitar gravação
+
+
+# ===== CÓMO FUNCIONA =====
+
+[how]
+es: Cómo funciona
+en: How it works
+ca: Com funciona
+pt: Como funciona
+
+[p1_t]
+es: Me envías la canción
+en: You send me the song
+ca: M'envies la cançó
+pt: Você me envia a música
+
+[p1_d]
+es: La maqueta, el tempo y tus referencias. Hablamos de lo que buscas.
+en: The demo, tempo and your references. We talk about what you're after.
+ca: La maqueta, el tempo i les teves referències. Parlem del que busques.
+pt: A demo, o andamento e suas referências. Conversamos sobre o que você procura.
+
+[p2_t]
+es: Grabo el bajo
+en: I record the bass
+ca: Enregistro el baix
+pt: Eu gravo o baixo
+
+[p2_d]
+es: Preparo la línea y la grabo con el instrumento que mejor encaje.
+en: I write the line and record it with the instrument that fits best.
+ca: Preparo la línia i l'enregistro amb l'instrument que hi encaixi millor.
+pt: Preparo a linha e gravo com o instrumento que melhor se encaixa.
+
+[p3_t]
+es: Entrega
+en: Delivery
+ca: Lliurament
+pt: Entrega
+
+[p3_d]
+es: Recibes la toma en dos pistas WAV: una limpia y otra procesada, listas para mezclar.
+en: You receive the take as two WAV tracks: one clean and one processed, ready to mix.
+ca: Reps la presa en dues pistes WAV: una neta i una altra processada, a punt per mesclar.
+pt: Você recebe o take em duas faixas WAV: uma limpa e outra processada, prontas para mixar.
+
+
+# ===== DOS VERSIONES DE CADA TOMA =====
+
+[dos_title]
+es: Dos versiones de cada toma
+en: Two versions of every take
+ca: Dues versions de cada presa
+pt: Duas versões de cada take
+
+[dos_lead]
+es: De cada toma te entrego dos pistas de la misma interpretación, para que tengas total libertad de hacer la mezcla a tu gusto.
+en: For every take I deliver two tracks of the same performance, so you have complete freedom to mix it your way.
+ca: De cada presa t'entrego dues pistes de la mateixa interpretació, perquè tinguis total llibertat per fer la mescla al teu gust.
+pt: De cada take eu entrego duas faixas da mesma execução, para você ter total liberdade de mixar do seu jeito.
+
+[dos1_t]
+es: Pista limpia (DI)
+en: Clean track (DI)
+ca: Pista neta (DI)
+pt: Faixa limpa (DI)
+
+[dos1_d]
+es: La señal directa del bajo, sin procesar. Ideal para trabajar el sonido tú mismo en la mezcla o pasarla por tu propia cadena.
+en: The direct bass signal, unprocessed. Perfect for shaping the sound yourself in the mix or running it through your own chain.
+ca: El senyal directe del baix, sense processar. Ideal per treballar el so tu mateix a la mescla o passar-lo per la teva pròpia cadena.
+pt: O sinal direto do baixo, sem processamento. Ideal para trabalhar o timbre você mesmo na mixagem ou passar pela sua própria cadeia.
+
+[dos2_t]
+es: Pista procesada
+en: Processed track
+ca: Pista processada
+pt: Faixa processada
+
+[dos2_d]
+es: La misma toma con preamp y efectos: los que yo elija para la canción o los que tú me indiques.
+en: The same take with preamp and effects: either my choice for the song or the ones you ask for.
+ca: La mateixa presa amb preamp i efectes: els que jo triï per a la cançó o els que tu m'indiquis.
+pt: O mesmo take com preamp e efeitos: os que eu escolher para a música ou os que você indicar.
+
+[dos3_t]
+es: Mezcla a tu gusto
+en: Mix it your way
+ca: Mescla al teu gust
+pt: Mixe do seu jeito
+
+[dos3_d]
+es: Usa una, la otra o combina las dos para encontrar el sonido exacto que buscas.
+en: Use one, the other, or blend both to get exactly the sound you're after.
+ca: Fes servir l'una, l'altra o combina-les per trobar el so exacte que busques.
+pt: Use uma, a outra ou combine as duas para chegar exatamente ao som que você procura.
+
+
+# ===== INSTRUMENTOS =====
+
+[instr]
+es: Instrumentos
+en: Instruments
+ca: Instruments
+pt: Instrumentos
+
+[i2]
+es: Fender Jazz Bass American Deluxe V (5 cuerdas)
+en: Fender Jazz Bass American Deluxe V (5 strings)
+ca: Fender Jazz Bass American Deluxe V (5 cordes)
+pt: Fender Jazz Bass American Deluxe V (5 cordas)
+
+[i3]
+es: Marcustico Bass · sonido de contrabajo
+en: Marcustico Bass · upright sound
+ca: Marcustico Bass · so de contrabaix
+pt: Marcustico Bass · som de contrabaixo
+
+[i4]
+es: Cuerdas D'Addario XS
+en: D'Addario XS strings
+ca: Cordes D'Addario XS
+pt: Cordas D'Addario XS
+
+[i5]
+es: Preamp Darkglass Anagram
+en: Darkglass Anagram preamp
+ca: Preamp Darkglass Anagram
+pt: Pré-amplificador Darkglass Anagram
+
+
+# ===== HE GRABADO CON =====
+
+[recwith]
+es: He grabado con
+en: I've recorded with
+ca: He enregistrat amb
+pt: Gravei com
+
+
+# ===== ESCUCHA =====
+
+[listen]
+es: Escucha
+en: Listen
+ca: Escolta
+pt: Ouça
+
+
+# ===== PREGUNTAS FRECUENTES =====
+
+[faq_title]
+es: Preguntas frecuentes
+en: FAQ
+ca: Preguntes freqüents
+pt: Perguntas frequentes
+
+[gq1]
+es: ¿Qué tengo que enviarte?
+en: What do I need to send you?
+ca: Què t'he d'enviar?
+pt: O que preciso enviar?
+
+[ga1]
+es: La canción o maqueta sin bajo (o con un bajo guía), el tempo y, si los tienes, referencias de estilo, acordes o partitura.
+en: The song or demo without bass (or with a guide bass), the tempo and, if you have them, style references, chords or sheet music.
+ca: La cançó o maqueta sense baix (o amb un baix guia), el tempo i, si en tens, referències d'estil, acords o partitura.
+pt: A música ou demo sem baixo (ou com um baixo-guia), o andamento e, se tiver, referências de estilo, acordes ou partitura.
+
+[gq2]
+es: ¿En qué formato entregas las pistas?
+en: What format do you deliver in?
+ca: En quin format lliures les pistes?
+pt: Em que formato você entrega as faixas?
+
+[ga2]
+es: En WAV y en dos versiones de la misma toma: una pista limpia (DI) y otra procesada con preamp y efectos, elegidos por mí o por ti. Así puedes mezclarlas a tu gusto.
+en: WAV, in two versions of the same take: a clean (DI) track and one processed with preamp and effects, chosen by me or by you. That way you can mix them your way.
+ca: En WAV i en dues versions de la mateixa presa: una pista neta (DI) i una altra processada amb preamp i efectes, triats per mi o per tu. Així les pots mesclar al teu gust.
+pt: Em WAV e em duas versões do mesmo take: uma faixa limpa (DI) e outra processada com preamp e efeitos, escolhidos por mim ou por você. Assim você pode mixá-las do seu jeito.
+
+[gq3]
+es: ¿Cuánto cuesta?
+en: How much does it cost?
+ca: Quant costa?
+pt: Quanto custa?
+
+[ga3]
+es: 80 € por canción a distancia y 100 € por canción en estudio.
+en: €80 per song for remote recording and €100 per song in the studio.
+ca: 80 € per cançó a distància i 100 € per cançó a l'estudi.
+pt: 80 € por música a distância e 100 € por música em estúdio.
+
+[gq4]
+es: ¿Puedo grabar contigo en Barcelona?
+en: Can I record with you in Barcelona?
+ca: Puc enregistrar amb tu a Barcelona?
+pt: Posso gravar com você em Barcelona?
+
+[ga4]
+es: Sí, en estudio. También puedo ir al estudio donde grabes, en Barcelona.
+en: Yes, in the studio. I can also come to the studio where you're recording in Barcelona.
+ca: Sí, a l'estudi. També puc venir a l'estudi on enregistris, a Barcelona.
+pt: Sim, em estúdio. Também posso ir ao estúdio onde você grava, em Barcelona.
+
+[gq5]
+es: ¿Qué instrumentos utilizas?
+en: What instruments do you use?
+ca: Quins instruments fas servir?
+pt: Quais instrumentos você usa?
+
+[ga5]
+es: Fender Jazz Bass de 1973, Fender Jazz Bass American Deluxe de 5 cuerdas y Marcustico Bass para sonido de contrabajo, con el preamp Darkglass Anagram.
+en: A 1973 Fender Jazz Bass, a 5-string Fender Jazz Bass American Deluxe and a Marcustico Bass for upright-style sound, with a Darkglass Anagram preamp.
+ca: Un Fender Jazz Bass del 1973, un Fender Jazz Bass American Deluxe de 5 cordes i un Marcustico Bass per al so de contrabaix, amb el preamp Darkglass Anagram.
+pt: Um Fender Jazz Bass de 1973, um Fender Jazz Bass American Deluxe de 5 cordas e um Marcustico Bass para som de contrabaixo, com o pré-amplificador Darkglass Anagram.
+
+
+# ===== ¿HABLAMOS? =====
+
+[cta_title]
+es: ¿Hablamos?
+en: Let’s talk
+ca: Parlem?
+pt: Vamos conversar?
+
+[g_cta]
+es: Envíame la canción o cuéntame el proyecto y te respondo con plazos.
+en: Send me the song or tell me about the project and I'll get back to you with timings.
+ca: Envia'm la cançó o explica'm el projecte i et responc amb terminis.
+pt: Envie a música ou conte sobre o projeto e eu respondo com prazos.
+
+[cta_btn]
+es: Escribir un email
+en: Send an email
+ca: Escriure un email
+pt: Enviar um e-mail

@@ -1,0 +1,355 @@
+# Textos de la página de Clases de bajo (martinlaportilla.com/clases-de-bajo/)
+# Cada texto empieza con su nombre entre corchetes y debajo una línea por idioma (es, en, ca, pt).
+# Cambia solo lo que va después de 'es:', 'en:', etc. No cambies los nombres entre corchetes.
+# Si dejas un idioma vacío, se queda el texto que tenía la web.
+
+[c_eyebrow]
+es: Clases · Presencial y online
+en: Lessons · In person & online
+ca: Classes · Presencial i en línia
+pt: Aulas · Presencial e online
+
+[c_h1]
+es: Clases de bajo en Barcelona y online
+en: Bass lessons in Barcelona and online
+ca: Classes de baix a Barcelona i en línia
+pt: Aulas de baixo em Barcelona e online
+
+[c_lead]
+es: Aprende bajo eléctrico con Martín Laportilla, bajista profesional con 30 años de trayectoria en directo y en estudio. Ha tocado con Saulo Fernandes y Margareth Menezes, ha grabado con Paquito D'Rivera y es artista D'Addario.
+en: Learn electric bass with Martín Laportilla, a professional bassist with a 30-year career on stage and in the studio. He has played with Saulo Fernandes and Margareth Menezes, recorded with Paquito D'Rivera and is a D'Addario artist.
+ca: Aprèn baix elèctric amb Martín Laportilla, baixista professional amb 30 anys de trajectòria en directe i a l'estudi. Ha tocat amb Saulo Fernandes i Margareth Menezes, ha enregistrat amb Paquito D'Rivera i és artista D'Addario.
+pt: Aprenda baixo elétrico com Martín Laportilla, baixista profissional com 30 anos de carreira nos palcos e em estúdio. Tocou com Saulo Fernandes e Margareth Menezes, gravou com Paquito D'Rivera e é artista D'Addario.
+
+[per_lesson]
+es: por clase
+en: per lesson
+ca: per classe
+pt: por aula
+
+[c_book]
+es: Reservar clase
+en: Book a lesson
+ca: Reservar classe
+pt: Agendar aula
+
+
+# ===== CÓMO SON LAS CLASES =====
+
+[c_about]
+es: Cómo son las clases
+en: How the lessons work
+ca: Com són les classes
+pt: Como são as aulas
+
+[formats]
+es: Formatos
+en: Formats
+ca: Formats
+pt: Formatos
+
+[f1_t]
+es: Presencial en Barcelona
+en: In person in Barcelona
+ca: Presencial a Barcelona
+pt: Presencial em Barcelona
+
+[f1_d]
+es: Clases individuales cara a cara, con tu bajo o con el mío.
+en: One-to-one lessons in person, with your bass or mine.
+ca: Classes individuals cara a cara, amb el teu baix o amb el meu.
+pt: Aulas individuais presenciais, com o seu baixo ou com o meu.
+
+[f2_t]
+es: Online por videollamada
+en: Online by video call
+ca: En línia per videotrucada
+pt: Online por videochamada
+
+[f2_d]
+es: Desde cualquier lugar, con la misma atención que en persona y material enviado tras cada clase.
+en: From anywhere, with the same attention as in person and materials sent after each lesson.
+ca: Des de qualsevol lloc, amb la mateixa atenció que en persona i material enviat després de cada classe.
+pt: De qualquer lugar, com a mesma atenção do presencial e material enviado após cada aula.
+
+[what]
+es: Qué trabajamos
+en: What we work on
+ca: Què treballem
+pt: O que trabalhamos
+
+[w1]
+es: Técnica de mano derecha e izquierda y sonido
+en: Right- and left-hand technique and tone
+ca: Tècnica de mà dreta i esquerra i so
+pt: Técnica de mão direita e esquerda e timbre
+
+[w2]
+es: Groove, tiempo y lenguaje rítmico
+en: Groove, time and rhythmic language
+ca: Groove, temps i llenguatge rítmic
+pt: Groove, tempo e linguagem rítmica
+
+[w3]
+es: Lectura y armonía aplicada al bajo
+en: Reading and harmony for bass
+ca: Lectura i harmonia aplicada al baix
+pt: Leitura e harmonia aplicada ao baixo
+
+[w4]
+es: Walking bass e improvisación
+en: Walking bass and improvisation
+ca: Walking bass i improvisació
+pt: Walking bass e improvisação
+
+[w5]
+es: Repertorio y preparación de proyectos
+en: Repertoire and project preparation
+ca: Repertori i preparació de projectes
+pt: Repertório e preparação de projetos
+
+[styles]
+es: Estilos
+en: Styles
+ca: Estils
+pt: Estilos
+
+[s2]
+es: Música brasileña
+en: Brazilian music
+ca: Música brasilera
+pt: Música brasileira
+
+[s4]
+es: Pop y soul
+en: Pop and soul
+ca: Pop i soul
+pt: Pop e soul
+
+[langnote]
+es: Clases en español. También en inglés y portugués si lo prefieres.
+en: Lessons in English, Spanish or Portuguese.
+ca: Classes en castellà. També en anglès i portuguès si ho prefereixes.
+pt: Aulas em espanhol. Também em inglês e português, se preferir.
+
+
+# ===== EN VÍDEO =====
+
+[c_vid]
+es: En vídeo
+en: On video
+ca: En vídeo
+pt: Em vídeo
+
+[c_vid_l]
+es: Transcripción de bajo
+en: Bass transcription
+ca: Transcripció de baix
+pt: Transcrição de baixo
+
+[c_vid2_l]
+es: Solo de bajo
+en: Bass solo
+ca: Solo de baix
+pt: Solo de baixo
+
+
+# ===== TARIFAS =====
+
+[rates]
+es: Tarifas
+en: Rates
+ca: Tarifes
+pt: Preços
+
+[t0_l]
+es: Presencial u online
+en: In person or online
+ca: Presencial o en línia
+pt: Presencial ou online
+
+[t0_t]
+es: Clase individual
+en: One-to-one lesson
+ca: Classe individual
+pt: Aula individual
+
+[t0_d]
+es: Una clase a medida de tu nivel y de lo que quieras trabajar.
+en: A lesson tailored to your level and what you want to work on.
+ca: Una classe a mida del teu nivell i del que vulguis treballar.
+pt: Uma aula sob medida para o seu nível e o que você quer trabalhar.
+
+[x1_l]
+es: Para regalar
+en: A perfect gift
+ca: Per regalar
+pt: Para presentear
+
+[x1_t]
+es: Bono regalo · 4 clases
+en: Gift voucher · 4 lessons
+ca: Bo regal · 4 classes
+pt: Vale-presente · 4 aulas
+
+[x1_d]
+es: Un regalo perfecto para cumpleaños o Navidad. Cuatro clases presenciales u online para usar cuando quiera. Te envío una tarjeta regalo lista para entregar.
+en: A perfect gift for birthdays or Christmas. Four lessons, in person or online, to use whenever they like. I'll send you a gift card ready to give.
+ca: Un regal perfecte per a aniversaris o Nadal. Quatre classes presencials o en línia per fer servir quan vulgui. T'envio una targeta regal a punt per donar.
+pt: Um presente perfeito para aniversários ou Natal. Quatro aulas presenciais ou online para usar quando quiser. Envio um cartão-presente pronto para entregar.
+
+[x1_b]
+es: Quiero el bono
+en: Get the voucher
+ca: Vull el bo
+pt: Quero o vale
+
+[x2_l]
+es: Desde cualquier país
+en: From any country
+ca: Des de qualsevol país
+pt: De qualquer país
+
+[x2_t]
+es: Corrección por vídeo
+en: Video feedback
+ca: Correcció per vídeo
+pt: Correção por vídeo
+
+[x2_d]
+es: Grábate tocando un tema o ejercicio y envíamelo. Te devuelvo un vídeo con mi análisis: sonido, tiempo, técnica y qué practicar a partir de ahora.
+en: Record yourself playing a tune or exercise and send it to me. I'll send back a video with my analysis: tone, time, technique and what to practise next.
+ca: Grava't tocant un tema o exercici i envia-me'l. Et retorno un vídeo amb la meva anàlisi: so, temps, tècnica i què practicar a partir d'ara.
+pt: Grave-se tocando uma música ou exercício e me envie. Devolvo um vídeo com a minha análise: timbre, tempo, técnica e o que praticar daqui em diante.
+
+[x2_b]
+es: Enviar mi vídeo
+en: Send my video
+ca: Enviar el meu vídeo
+pt: Enviar meu vídeo
+
+[x3_l]
+es: Por videollamada
+en: By video call
+ca: Per videotrucada
+pt: Por videochamada
+
+[x3_t]
+es: Sesión de sonido y equipo
+en: Tone & gear session
+ca: Sessió de so i equip
+pt: Sessão de timbre e equipamento
+
+[x3_d]
+es: Una hora para resolver tu sonido: configurar tu pedalera o preamp (por ejemplo, un Darkglass), elegir bajo o cuerdas, o preparar tu equipo para el directo y el estudio.
+en: One hour to sort out your tone: set up your pedalboard or preamp (a Darkglass, for example), choose a bass or strings, or get your rig ready for stage and studio.
+ca: Una hora per resoldre el teu so: configurar la pedalera o el preamp (per exemple, un Darkglass), triar baix o cordes, o preparar l'equip per al directe i l'estudi.
+pt: Uma hora para resolver o seu timbre: configurar a pedaleira ou o pré (por exemplo, um Darkglass), escolher baixo ou cordas, ou preparar o equipamento para o palco e o estúdio.
+
+[x3_b]
+es: Reservar sesión
+en: Book a session
+ca: Reservar sessió
+pt: Agendar sessão
+
+
+# ===== PREGUNTAS FRECUENTES =====
+
+[faq_title]
+es: Preguntas frecuentes
+en: FAQ
+ca: Preguntes freqüents
+pt: Perguntas frequentes
+
+[cq1]
+es: ¿Para qué nivel son las clases?
+en: What level are the lessons for?
+ca: Per a quin nivell són les classes?
+pt: Para qual nível são as aulas?
+
+[ca1]
+es: Para todos los niveles: desde quien empieza de cero hasta músicos que quieren profundizar en un estilo o preparar un proyecto profesional.
+en: All levels: from complete beginners to musicians who want to go deeper into a style or prepare a professional project.
+ca: Per a tots els nivells: des de qui comença de zero fins a músics que volen aprofundir en un estil o preparar un projecte professional.
+pt: Para todos os níveis: de quem está começando do zero a músicos que querem se aprofundar em um estilo ou preparar um projeto profissional.
+
+[cq2]
+es: ¿Cómo funcionan las clases online?
+en: How do online lessons work?
+ca: Com funcionen les classes en línia?
+pt: Como funcionam as aulas online?
+
+[ca2]
+es: Por videollamada. Solo necesitas tu bajo, un ordenador, tablet o móvil con cámara y una conexión estable. Te envío el material de la clase.
+en: By video call. You just need your bass, a computer, tablet or phone with a camera and a stable connection. I'll send you the lesson materials.
+ca: Per videotrucada. Només necessites el teu baix, un ordinador, tauleta o mòbil amb càmera i una connexió estable. T'envio el material de la classe.
+pt: Por videochamada. Você só precisa do seu baixo, um computador, tablet ou celular com câmera e uma conexão estável. Envio o material da aula.
+
+[cq3]
+es: ¿Dónde son las clases presenciales?
+en: Where are the in-person lessons?
+ca: On són les classes presencials?
+pt: Onde são as aulas presenciais?
+
+[ca3]
+es: En Barcelona. Al escribirme te indico la ubicación y los horarios disponibles.
+en: In Barcelona. When you get in touch I'll tell you the location and available times.
+ca: A Barcelona. Quan m'escriguis t'indico la ubicació i els horaris disponibles.
+pt: Em Barcelona. Quando você me escrever, indico o local e os horários disponíveis.
+
+[cq4]
+es: ¿Cuánto cuesta una clase?
+en: How much is a lesson?
+ca: Quant costa una classe?
+pt: Quanto custa uma aula?
+
+[ca4]
+es: Cada clase cuesta 30 €, tanto presencial como online.
+en: Each lesson is €30, in person or online.
+ca: Cada classe costa 30 €, tant presencial com en línia.
+pt: Cada aula custa 30 €, presencial ou online.
+
+[cq5]
+es: ¿Puedo regalar clases?
+en: Can I give lessons as a gift?
+ca: Puc regalar classes?
+pt: Posso dar aulas de presente?
+
+[ca5]
+es: Sí. El bono regalo de 4 clases cuesta 110 € y te envío una tarjeta regalo lista para entregar.
+en: Yes. The 4-lesson gift voucher is €110 and I'll send you a gift card ready to give.
+ca: Sí. El bo regal de 4 classes costa 110 € i t'envio una targeta regal a punt per donar.
+pt: Sim. O vale-presente de 4 aulas custa 110 € e envio um cartão-presente pronto para entregar.
+
+[cq6]
+es: ¿Cómo reservo una clase?
+en: How do I book a lesson?
+ca: Com reservo una classe?
+pt: Como agendo uma aula?
+
+[ca6]
+es: Escríbeme a info@martinlaportilla.com contándome tu nivel y qué te gustaría trabajar, y te propongo horario.
+en: Email me at info@martinlaportilla.com with your level and what you'd like to work on, and I'll suggest a time.
+ca: Escriu-me a info@martinlaportilla.com explicant-me el teu nivell i què t'agradaria treballar, i et proposo horari.
+pt: Escreva para info@martinlaportilla.com contando seu nível e o que gostaria de trabalhar, e eu proponho um horário.
+
+
+# ===== ¿HABLAMOS? =====
+
+[cta_title]
+es: ¿Hablamos?
+en: Let’s talk
+ca: Parlem?
+pt: Vamos conversar?
+
+[c_cta]
+es: Cuéntame tu nivel y qué te gustaría aprender, y te propongo horario para la primera clase.
+en: Tell me your level and what you'd like to learn, and I'll suggest a time for your first lesson.
+ca: Explica'm el teu nivell i què t'agradaria aprendre, i et proposo horari per a la primera classe.
+pt: Conte seu nível e o que gostaria de aprender, e eu proponho um horário para a primeira aula.
+
+[cta_btn]
+es: Escribir un email
+en: Send an email
+ca: Escriure un email
+pt: Enviar um e-mail

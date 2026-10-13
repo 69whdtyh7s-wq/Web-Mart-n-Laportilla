@@ -1,0 +1,91 @@
+# Textos de la sección «Clases y grabaciones» de la página principal
+# Cada texto empieza con su nombre entre corchetes y debajo una línea por idioma (es, en, ca, pt).
+# Cambia solo lo que va después de 'es:', 'en:', etc. No cambies los nombres entre corchetes.
+# Si dejas un idioma vacío, se queda el texto que tenía la web.
+
+
+# ===== CLASES Y GRABACIONES =====
+
+[srv_title]
+es: Clases y grabaciones
+en: Lessons & recordings
+ca: Classes i enregistraments
+pt: Aulas e gravações
+
+[srv_l_tag]
+es: Presencial · Online
+en: In person · Online
+ca: Presencial · En línia
+pt: Presencial · Online
+
+[srv_lessons]
+es: Clases de bajo
+en: Bass lessons
+ca: Classes de baix
+pt: Aulas de baixo
+
+[srv_lessons_txt]
+es: Clases de bajo eléctrico para todos los niveles, presenciales en Barcelona u online.
+en: Electric bass lessons for all levels, in person in Barcelona or online.
+ca: Classes de baix elèctric per a tots els nivells, presencials a Barcelona o en línia.
+pt: Aulas de baixo elétrico para todos os níveis, presenciais em Barcelona ou online.
+
+[srv_l1]
+es: Técnica, groove y sonido
+en: Technique, groove and tone
+ca: Tècnica, groove i so
+pt: Técnica, groove e timbre
+
+[srv_l2]
+es: Lectura y armonía aplicada al bajo
+en: Reading and harmony for bass
+ca: Lectura i harmonia aplicada al baix
+pt: Leitura e harmonia aplicada ao baixo
+
+[srv_l3]
+es: Jazz, música brasileña, latin y pop
+en: Jazz, Brazilian music, Latin and pop
+ca: Jazz, música brasilera, latin i pop
+pt: Jazz, música brasileira, latin e pop
+
+[srv_more]
+es: Más información →
+en: More info →
+ca: Més informació →
+pt: Mais informações →
+
+[srv_r_tag]
+es: A distancia · Estudio
+en: Remote · Studio
+ca: A distància · Estudi
+pt: A distância · Estúdio
+
+[srv_rec]
+es: Grabación a distancia
+en: Remote recording
+ca: Enregistrament a distància
+pt: Gravação remota
+
+[srv_rec_txt]
+es: Grabo líneas de bajo para tus canciones, en estudio o a distancia, para producciones de cualquier país.
+en: I record bass lines for your songs, in the studio or remotely, for productions anywhere in the world.
+ca: Enregistro línies de baix per a les teves cançons, a l’estudi o a distància, per a produccions de qualsevol país.
+pt: Gravo linhas de baixo para as suas músicas, em estúdio ou a distância, para produções de qualquer país.
+
+[srv_r1]
+es: Bajo de 4 y 5 cuerdas y sonido de contrabajo
+en: 4- and 5-string bass and upright sound
+ca: Baix de 4 i 5 cordes i so de contrabaix
+pt: Baixo de 4 e 5 cordas e som de contrabaixo
+
+[srv_r2]
+es: Pistas limpias, listas para mezclar
+en: Clean tracks, ready to mix
+ca: Pistes netes, a punt per mesclar
+pt: Faixas limpas, prontas para mixar
+
+[srv_r3]
+es: Envíame la canción y te paso presupuesto
+en: Send me the song and I’ll send you a quote
+ca: Envia’m la cançó i et passo pressupost
+pt: Envie a música e eu mando um orçamento
